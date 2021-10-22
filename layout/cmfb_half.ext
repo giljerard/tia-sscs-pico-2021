@@ -20,15 +20,15 @@ node "Vout" 33158 1913.46 1180 1040 m1 0 0 0 0 0 0 0 0 1580000 33580 420000 8800
 node "diode" 11083 463.51 -420 1430 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 359400 18260 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "VDD" 22663 6575.3 420 1830 m1 0 0 0 0 1744000 5960 0 0 168000 4360 588000 13160 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 672000 13240 360000 2460 0 0 0 0 0 0 0 0 0 0
 substrate "GND" 0 0 1510 -2430 m1 0 0 0 0 0 0 0 0 754000 16180 208000 5360 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 832000 16240 571200 3340 0 0 0 0 0 0 0 0 0 0
-cap "diode" "Vout" 121.2
-cap "Vout" "Vin" 729.75
-cap "diode" "VDD" 161.6
 cap "Vin" "Vb3" 2.3
-cap "Vout" "res" 25990.8
-cap "res" "VDD" 961.329
+cap "Vin" "Vout" 729.75
+cap "VDD" "Vout" 6838.58
+cap "VDD" "diode" 161.6
+cap "diode" "Vout" 121.2
 cap "Vin" "res" 729.75
-cap "Vout" "VDD" 6838.58
-cap "Vb3" "res" 505
+cap "VDD" "res" 961.329
+cap "res" "Vb3" 505
+cap "Vout" "res" 25990.8
 device msubckt sky130_fd_pr__nfet_01v8 -270 -2320 -269 -2319 l=100 w=2600 "GND" "Vb3" 200 0 "res" 2600 0 "GND" 2600 0
 device msubckt sky130_fd_pr__nfet_01v8 -270 -2120 -269 -2119 l=100 w=2600 "GND" "Vb3" 200 0 "GND" 2600 0 "res" 2600 0
 device msubckt sky130_fd_pr__nfet_01v8 -270 -1920 -269 -1919 l=100 w=2600 "GND" "Vb3" 200 0 "res" 2600 0 "GND" 2600 0

@@ -8333,13 +8333,13 @@ rect 3160 -1220 3180 -1200
 rect 3200 -1220 3220 -1200
 rect 3240 -1220 3250 -1200
 rect 2450 -1245 3250 -1220
-use core_half  core_half_0
-timestamp 1634785440
-transform -1 0 -3650 0 1 560
-box -3670 -655 -660 1470
 use core_half  core_half_1
 timestamp 1634785440
 transform 1 0 3780 0 1 560
+box -3670 -655 -660 1470
+use core_half  core_half_0
+timestamp 1634785440
+transform -1 0 -3650 0 1 560
 box -3670 -655 -660 1470
 << labels >>
 rlabel metal1 1660 495 1660 495 1 Vout_p

@@ -73,6 +73,12 @@ N 470 -80 510 -80 { lab=Vinp}
 N 510 -220 700 -220 { lab=Vinp}
 N 400 -100 400 -60 { lab=Iin_p}
 N 460 -100 460 -60 { lab=Vinp}
+N 790 -910 790 -870 { lab=Vcmfb1}
+N 850 -910 850 -870 { lab=GND}
+N 770 -890 790 -890 { lab=Vcmfb1}
+N 1680 -890 1680 -850 { lab=Vcmfb2}
+N 1740 -890 1740 -850 { lab=GND}
+N 1660 -870 1680 -870 { lab=Vcmfb2}
 C {devices/lab_wire.sym} 630 -310 0 1 {name=l8 sig_type=std_logic lab=Vinn}
 C {devices/lab_wire.sym} 630 -220 0 1 {name=l17 sig_type=std_logic lab=Vinp}
 C {devices/lab_wire.sym} 1880 -250 0 1 {name=l14 sig_type=std_logic lab=Vcm2}
@@ -216,3 +222,9 @@ C {xschem_sky130/sky130_fd_pr/cap_mim_m3_1.sym} 430 -290 3 1 {name=C5 model=cap_
 C {xschem_sky130/sky130_fd_pr/cap_mim_m3_2.sym} 430 -330 1 1 {name=C6 model=cap_mim_m3_2 W=61.2 L=61.2 MF=1 spiceprefix=X}
 C {xschem_sky130/sky130_fd_pr/cap_mim_m3_1.sym} 430 -60 3 1 {name=C7 model=cap_mim_m3_1 W=61.2 L=61.2 MF=1 spiceprefix=X}
 C {xschem_sky130/sky130_fd_pr/cap_mim_m3_2.sym} 430 -100 1 1 {name=C8 model=cap_mim_m3_2 W=61.2 L=61.2 MF=1 spiceprefix=X}
+C {xschem_sky130/sky130_fd_pr/cap_mim_m3_1.sym} 820 -870 3 1 {name=C9 model=cap_mim_m3_1 W=33.5 L=33.5 MF=1 spiceprefix=X}
+C {xschem_sky130/sky130_fd_pr/cap_mim_m3_2.sym} 820 -910 1 1 {name=C10 model=cap_mim_m3_2 W=33.5 L=33.5 MF=1 spiceprefix=X}
+C {devices/gnd.sym} 850 -890 3 1 {name=l1 lab=GND}
+C {xschem_sky130/sky130_fd_pr/cap_mim_m3_1.sym} 1710 -850 3 1 {name=C11 model=cap_mim_m3_1 W=33.5 L=33.5 MF=1 spiceprefix=X}
+C {xschem_sky130/sky130_fd_pr/cap_mim_m3_2.sym} 1710 -890 1 1 {name=C12 model=cap_mim_m3_2 W=33.5 L=33.5 MF=1 spiceprefix=X}
+C {devices/gnd.sym} 1740 -870 3 1 {name=l2 lab=GND}

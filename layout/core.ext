@@ -34,11 +34,11 @@ node "w_n50_1010#" 12646 3751.5 -50 1010 nw 0 0 0 0 1250500 6920 0 0 0 0 0 0 0 0
 substrate "GND" 0 0 -5480 -2480 m1 0 0 0 0 0 0 0 0 8236000 171560 2272000 57120 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9088000 171680 7840000 20280 0 0 0 0 0 0 0 0 0 0
 equiv "GND" "GND#3"
 equiv "GND" "GND#2"
+cap "Vin_n" "Vin_p" 151.364
 cap "Vcmfb" "Vb2" 150
-cap "Vb1" "a_n6970_n2190#" 4540
-cap "Vin_p" "Vin_n" 151.364
-cap "Vcmfb" "w_n50_1010#" 62.4
-cap "Vb2" "w_n50_1010#" 275.6
+cap "a_n6970_n2190#" "Vb1" 4540
+cap "w_n50_1010#" "Vb2" 275.6
+cap "w_n50_1010#" "Vcmfb" 62.4
 device msubckt sky130_fd_pr__nfet_01v8 -6970 -2290 -6969 -2289 l=100 w=14200 "GND" "Vb1" 200 0 "GND" 14200 0 "a_n6970_n2190#" 14200 0
 device msubckt sky130_fd_pr__nfet_01v8 -6970 -2090 -6969 -2089 l=100 w=14200 "GND" "Vb1" 200 0 "a_n6970_n2190#" 14200 0 "GND" 14200 0
 device msubckt sky130_fd_pr__nfet_01v8 -6970 -1890 -6969 -1889 l=100 w=14200 "GND" "Vb1" 200 0 "GND" 14200 0 "a_n6970_n2190#" 14200 0
@@ -49,39 +49,39 @@ device msubckt sky130_fd_pr__nfet_01v8 -6970 -1090 -6969 -1089 l=100 w=14200 "GN
 device msubckt sky130_fd_pr__nfet_01v8 -6970 -890 -6969 -889 l=100 w=14200 "GND" "Vb1" 200 0 "a_n6970_n2190#" 14200 0 "GND" 14200 0
 device msubckt sky130_fd_pr__nfet_01v8 -6970 -690 -6969 -689 l=100 w=14200 "GND" "Vb1" 200 0 "GND" 14200 0 "a_n6970_n2190#" 14200 0
 device msubckt sky130_fd_pr__nfet_01v8 -6970 -490 -6969 -489 l=100 w=14200 "GND" "Vb1" 200 0 "a_n6970_n2190#" 14200 0 "GND" 14200 0
-cap "a_n6970_n2190#" "core_half_0/GND" 108.706
-cap "core_half_0/Vout" "core_half_0/GND" 112
+cap "core_half_0/GND" "a_n6970_n2190#" 108.706
 cap "core_half_0/GND" "core_half_0/s" 184.8
-cap "GND" "core_half_0/s" 231
-cap "GND" "core_half_0/Vout" 140
-cap "GND" "a_n6970_n2190#" 135.882
-cap "GND" "core_half_0/s" 366.882
+cap "core_half_0/GND" "core_half_0/Vout" 112
+cap "a_n6970_n2190#" "GND" 135.882
+cap "core_half_0/s" "GND" 231
 cap "core_half_0/Vout" "GND" 140
-cap "core_half_0/Vin" "core_half_1/Vin" 4.76
+cap "GND" "core_half_0/s" 366.882
+cap "GND" "core_half_0/Vout" 140
 cap "core_half_0/s" "GND" 283.024
-cap "GND" "core_half_0/Vout" 108
+cap "core_half_0/Vout" "GND" 108
+cap "core_half_0/Vin" "core_half_1/Vin" 4.76
 cap "core_half_0/Vin" "GND" 59.2308
-cap "core_half_0/Vin" "core_half_1/Vin" 56.7273
-cap "GND" "core_half_1/s" 209.647
 cap "core_half_0/Vin" "GND" 6.34615
-cap "GND" "core_half_1/Vout" 80
 cap "core_half_1/Vin" "GND" 65.5769
-cap "core_half_1/s" "GND" 366.882
-cap "core_half_1/Vout" "GND" 140
+cap "core_half_1/Vin" "core_half_0/Vin" 56.7273
+cap "GND" "core_half_1/Vout" 80
+cap "GND" "core_half_1/s" 209.647
+cap "GND" "core_half_1/Vout" 140
+cap "GND" "core_half_1/s" 366.882
 cap "core_half_1/Vout" "GND" 140
 cap "a_n6970_n2190#" "GND" 135.882
 cap "core_half_1/s" "GND" 231
+cap "core_half_1/s" "core_half_1/GND" 231
 cap "core_half_1/Vout" "core_half_1/GND" 140
 cap "a_n6970_n2190#" "core_half_1/GND" 135.882
-cap "core_half_1/s" "core_half_1/GND" 231
-cap "core_half_0/Vin" "core_half_1/Vin" 4.32
-cap "core_half_0/Vin" "core_half_1/Vin" 101.636
+cap "core_half_1/Vin" "core_half_0/Vin" 4.32
 cap "w_n50_1010#" "core_half_0/Vb2" -1.42109e-14
-cap "core_half_1/Vb2" "w_n50_1010#" 2.84217e-14
-cap "core_half_1/Vb2" "core_half_0/Vcmfb" -16.6667
+cap "core_half_0/Vin" "core_half_1/Vin" 101.636
+cap "w_n50_1010#" "core_half_1/Vb2" 2.84217e-14
+cap "core_half_0/Vcmfb" "core_half_1/Vb2" -16.6667
 cap "core_half_1/Vb2" "core_half_1/Vcmfb" 1.13687e-13
-cap "w_n50_1010#" "core_half_1/Vb2" 1.06581e-14
 cap "w_n50_1010#" "core_half_1/Vcmfb" -7.10543e-15
+cap "core_half_1/Vb2" "w_n50_1010#" 1.06581e-14
 merge "core_half_0/VDD" "VDD#1" -16073.5 0 0 0 0 -4808200 -21372 0 0 104640 -4824 89320 -4884 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 209280 -5304 -51300 -4040 0 0 0 0 0 0 0 0 0 0
 merge "VDD#1" "VDD"
 merge "VDD" "core_half_1/VDD"

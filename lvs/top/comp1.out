@@ -27,6 +27,8 @@ VDD                                        |VDD
 Cell pin lists are equivalent.
 Device classes cmfb_half and cmfb_half are equivalent.
 Equate elements:  no current cell.
+Equate elements:  no current cell.
+Equate elements:  no current cell.
 
 Subcircuit summary:
 Circuit 1: sf_half                         |Circuit 2: sf_half                         
@@ -50,8 +52,6 @@ g_d                                        |g_d
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sf_half and sf_half are equivalent.
-Equate elements:  no current cell.
-Equate elements:  no current cell.
 
 Subcircuit summary:
 Circuit 1: core_half                       |Circuit 2: core_half                       
@@ -105,6 +105,29 @@ Cell pin lists are equivalent.
 Device classes cmfb and cmfb are equivalent.
 
 Subcircuit summary:
+Circuit 1: mirror_4                        |Circuit 2: mirror_4                        
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__cap_mim_m3_1 (1)             |sky130_fd_pr__cap_mim_m3_1 (1)             
+sky130_fd_pr__cap_mim_m3_2 (1)             |sky130_fd_pr__cap_mim_m3_2 (1)             
+sky130_fd_pr__res_xhigh_po (1)             |sky130_fd_pr__res_xhigh_po (1)             
+sky130_fd_pr__nfet_01v8 (1)                |sky130_fd_pr__nfet_01v8 (1)                
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 3                          |Number of nets: 3                          
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: mirror_4                        |Circuit 2: mirror_4                        
+-------------------------------------------|-------------------------------------------
+Vb4_                                       |Vb4_                                       
+Vb4                                        |Vb4                                        
+GND                                        |GND                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes mirror_4 and mirror_4 are equivalent.
+
+Subcircuit summary:
 Circuit 1: sf                              |Circuit 2: sf                              
 -------------------------------------------|-------------------------------------------
 sf_half (2)                                |sf_half (2)                                
@@ -129,29 +152,6 @@ Vin_p                                      |Vin_p
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sf and sf are equivalent.
-
-Subcircuit summary:
-Circuit 1: mirror_4                        |Circuit 2: mirror_4                        
--------------------------------------------|-------------------------------------------
-sky130_fd_pr__cap_mim_m3_1 (1)             |sky130_fd_pr__cap_mim_m3_1 (1)             
-sky130_fd_pr__cap_mim_m3_2 (1)             |sky130_fd_pr__cap_mim_m3_2 (1)             
-sky130_fd_pr__res_xhigh_po (1)             |sky130_fd_pr__res_xhigh_po (1)             
-sky130_fd_pr__nfet_01v8 (1)                |sky130_fd_pr__nfet_01v8 (1)                
-Number of devices: 4                       |Number of devices: 4                       
-Number of nets: 3                          |Number of nets: 3                          
----------------------------------------------------------------------------------------
-Circuits match uniquely.
-Netlists match uniquely.
-
-Subcircuit pins:
-Circuit 1: mirror_4                        |Circuit 2: mirror_4                        
--------------------------------------------|-------------------------------------------
-Vb4_                                       |Vb4_                                       
-Vb4                                        |Vb4                                        
-GND                                        |GND                                        
----------------------------------------------------------------------------------------
-Cell pin lists are equivalent.
-Device classes mirror_4 and mirror_4 are equivalent.
 
 Subcircuit summary:
 Circuit 1: mirror_3                        |Circuit 2: mirror_3                        
@@ -216,12 +216,7 @@ Number of devices: 4                       |Number of devices: 4
 Number of nets: 3                          |Number of nets: 3                          
 ---------------------------------------------------------------------------------------
 Circuits match uniquely.
-Property errors were found.
 Netlists match uniquely.
-There were property errors.
-sky130_fd_pr__res_xhigh_po8 vs. sky130_fd_pr__res_xhigh_poR10:
- l circuit1: 176   circuit2: 16   (delta=167%, cutoff=1%)
- w circuit1: 0.35   circuit2: 3.85   (delta=167%, cutoff=1%)
 
 Subcircuit pins:
 Circuit 1: mirror_1                        |Circuit 2: mirror_1                        
@@ -237,15 +232,15 @@ Subcircuit summary:
 Circuit 1: top                             |Circuit 2: top                             
 -------------------------------------------|-------------------------------------------
 cmfb (2)                                   |cmfb (2)                                   
-sf (1)                                     |sf (1)                                     
 mirror_4 (1)                               |mirror_4 (1)                               
+sf (1)                                     |sf (1)                                     
 mirror_3 (1)                               |mirror_3 (1)                               
 core (2)                                   |core (2)                                   
 mirror_1 (1)                               |mirror_1 (1)                               
-sky130_fd_pr__cap_mim_m3_1 (6)             |sky130_fd_pr__cap_mim_m3_1 (6)             
+sky130_fd_pr__cap_mim_m3_1 (4)             |sky130_fd_pr__cap_mim_m3_1 (4)             
 sky130_fd_pr__res_xhigh_po (8)             |sky130_fd_pr__res_xhigh_po (8)             
-sky130_fd_pr__cap_mim_m3_2 (6)             |sky130_fd_pr__cap_mim_m3_2 (6)             
-Number of devices: 28                      |Number of devices: 28                      
+sky130_fd_pr__cap_mim_m3_2 (4)             |sky130_fd_pr__cap_mim_m3_2 (4)             
+Number of devices: 24                      |Number of devices: 24                      
 Number of nets: 26                         |Number of nets: 26                         
 ---------------------------------------------------------------------------------------
 Circuits match uniquely.
@@ -269,4 +264,3 @@ Iin_n                                      |Iin_n
 Cell pin lists are equivalent.
 Device classes top and top are equivalent.
 Circuits match uniquely.
-The following cells had property errors: mirror_1

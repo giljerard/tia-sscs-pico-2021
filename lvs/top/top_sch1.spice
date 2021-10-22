@@ -34,15 +34,11 @@ XC5 Iin_n Vinn sky130_fd_pr__cap_mim_m3_1 W=61.2 L=61.2 MF=1 m=1
 XC6 Vinn Iin_n sky130_fd_pr__cap_mim_m3_2 W=61.2 L=61.2 MF=1 m=1
 XC7 Iin_p Vinp sky130_fd_pr__cap_mim_m3_1 W=61.2 L=61.2 MF=1 m=1
 XC8 Vinp Iin_p sky130_fd_pr__cap_mim_m3_2 W=61.2 L=61.2 MF=1 m=1
-XC9 Vcmfb1 GND sky130_fd_pr__cap_mim_m3_1 W=33.5 L=33.5 MF=1 m=1
-XC10 GND Vcmfb1 sky130_fd_pr__cap_mim_m3_2 W=33.5 L=33.5 MF=1 m=1
-XC11 Vcmfb2 GND sky130_fd_pr__cap_mim_m3_1 W=33.5 L=33.5 MF=1 m=1
-XC12 GND Vcmfb2 sky130_fd_pr__cap_mim_m3_2 W=33.5 L=33.5 MF=1 m=1
 .ends
 
-* expanding   symbol:  tia-sscs-pico-2021/schem/core.sym # of pins=9
-* sym_path: /home/jared/Documents/GS_Design/tia-sscs-pico-2021/schem/core.sym
-* sch_path: /home/jared/Documents/GS_Design/tia-sscs-pico-2021/schem/core.sch
+* expanding   symbol:  tia/schem/core.sym # of pins=9
+* sym_path: /home/jared/Documents/GS_Design/tia/schem/core.sym
+* sch_path: /home/jared/Documents/GS_Design/tia/schem/core.sch
 .subckt core  Vin_n Vin_p Vb2 Vb1 Vcmfb VDD GND Vout_p Vout_n
 *.ipin Vb2
 *.ipin Vcmfb
@@ -61,9 +57,9 @@ x2 Vin_n Vb2 Vcmfb VDD GND Vout_p net1 core_half
 .ends
 
 
-* expanding   symbol:  tia-sscs-pico-2021/schem/sf.sym # of pins=7
-* sym_path: /home/jared/Documents/GS_Design/tia-sscs-pico-2021/schem/sf.sym
-* sch_path: /home/jared/Documents/GS_Design/tia-sscs-pico-2021/schem/sf.sch
+* expanding   symbol:  tia/schem/sf.sym # of pins=7
+* sym_path: /home/jared/Documents/GS_Design/tia/schem/sf.sym
+* sch_path: /home/jared/Documents/GS_Design/tia/schem/sf.sch
 .subckt sf  VDD GND Vin_p Vin_n Vout_p Vout_n Vb4
 *.ipin Vin_n
 *.iopin VDD
@@ -77,9 +73,9 @@ X2 VDD Vb4 Vout_n Vin_n GND sf_half
 .ends
 
 
-* expanding   symbol:  tia-sscs-pico-2021/schem/cmfb.sym # of pins=6
-* sym_path: /home/jared/Documents/GS_Design/tia-sscs-pico-2021/schem/cmfb.sym
-* sch_path: /home/jared/Documents/GS_Design/tia-sscs-pico-2021/schem/cmfb.sch
+* expanding   symbol:  tia/schem/cmfb.sym # of pins=6
+* sym_path: /home/jared/Documents/GS_Design/tia/schem/cmfb.sym
+* sch_path: /home/jared/Documents/GS_Design/tia/schem/cmfb.sch
 .subckt cmfb  Vcm Vref Vb3 VDD GND Vcmfb
 *.iopin VDD
 *.iopin GND
@@ -93,9 +89,9 @@ XR20 net2 net1 GND sky130_fd_pr__res_xhigh_po W=1.41 L=1.41 mult=1 m=1
 .ends
 
 
-* expanding   symbol:  tia-sscs-pico-2021/schem/mirror_1.sym # of pins=3
-* sym_path: /home/jared/Documents/GS_Design/tia-sscs-pico-2021/schem/mirror_1.sym
-* sch_path: /home/jared/Documents/GS_Design/tia-sscs-pico-2021/schem/mirror_1.sch
+* expanding   symbol:  tia/schem/mirror_1.sym # of pins=3
+* sym_path: /home/jared/Documents/GS_Design/tia/schem/mirror_1.sym
+* sch_path: /home/jared/Documents/GS_Design/tia/schem/mirror_1.sch
 .subckt mirror_1  Vb1 Vb1_ GND
 *.iopin GND
 *.iopin Vb1_
@@ -105,13 +101,23 @@ XM27 Vb1_ Vb1_ GND GND sky130_fd_pr__nfet_01v8 L=.5 W=3.6 nf=1 ad='int((nf+1)/2)
 + sa=0 sb=0 sd=0 mult=1 m=1 
 XC1 Vb1 GND sky130_fd_pr__cap_mim_m3_1 W=15.8 L=15.8 MF=1 m=1
 XC2 GND Vb1 sky130_fd_pr__cap_mim_m3_2 W=15.8 L=15.8 MF=1 m=1
-XR10 Vb1 Vb1_ GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=11 m=11
+XR11 V10 Vb1 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR1 Vb1_ V1 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR2 V10 V9 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR3 V2 V1 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR4 V8 V9 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR5 V2 V3 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR6 V8 V7 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR7 V4 V3 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR8 V6 V7 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR9 V4 V5 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR10 V6 V5 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
 .ends
 
 
-* expanding   symbol:  tia-sscs-pico-2021/schem/mirror_3.sym # of pins=3
-* sym_path: /home/jared/Documents/GS_Design/tia-sscs-pico-2021/schem/mirror_3.sym
-* sch_path: /home/jared/Documents/GS_Design/tia-sscs-pico-2021/schem/mirror_3.sch
+* expanding   symbol:  tia/schem/mirror_3.sym # of pins=3
+* sym_path: /home/jared/Documents/GS_Design/tia/schem/mirror_3.sym
+* sch_path: /home/jared/Documents/GS_Design/tia/schem/mirror_3.sch
 .subckt mirror_3  Vb3 Vb3_ GND
 *.iopin GND
 *.iopin Vb3_
@@ -135,9 +141,9 @@ XR10 V6 V5 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
 .ends
 
 
-* expanding   symbol:  tia-sscs-pico-2021/schem/mirror_4.sym # of pins=3
-* sym_path: /home/jared/Documents/GS_Design/tia-sscs-pico-2021/schem/mirror_4.sym
-* sch_path: /home/jared/Documents/GS_Design/tia-sscs-pico-2021/schem/mirror_4.sch
+* expanding   symbol:  tia/schem/mirror_4.sym # of pins=3
+* sym_path: /home/jared/Documents/GS_Design/tia/schem/mirror_4.sym
+* sch_path: /home/jared/Documents/GS_Design/tia/schem/mirror_4.sch
 .subckt mirror_4  Vb4 Vb4_ GND
 *.iopin GND
 *.iopin Vb4_
@@ -161,9 +167,9 @@ XR10 V6 V5 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
 .ends
 
 
-* expanding   symbol:  tia-sscs-pico-2021/schem/core_half.sym # of pins=7
-* sym_path: /home/jared/Documents/GS_Design/tia-sscs-pico-2021/schem/core_half.sym
-* sch_path: /home/jared/Documents/GS_Design/tia-sscs-pico-2021/schem/core_half.sch
+* expanding   symbol:  tia/schem/core_half.sym # of pins=7
+* sym_path: /home/jared/Documents/GS_Design/tia/schem/core_half.sym
+* sch_path: /home/jared/Documents/GS_Design/tia/schem/core_half.sch
 .subckt core_half  Vin Vb2 Vcmfb VDD GND Vout s
 *.ipin Vb2
 *.ipin Vcmfb
@@ -184,9 +190,9 @@ XM25 Vout Vb2 VDD VDD sky130_fd_pr__pfet_01v8 L=0.18 W=448 nf=15 ad='int((nf+1)/
 .ends
 
 
-* expanding   symbol:  tia-sscs-pico-2021/schem/sf_half.sym # of pins=5
-* sym_path: /home/jared/Documents/GS_Design/tia-sscs-pico-2021/schem/sf_half.sym
-* sch_path: /home/jared/Documents/GS_Design/tia-sscs-pico-2021/schem/sf_half.sch
+* expanding   symbol:  tia/schem/sf_half.sym # of pins=5
+* sym_path: /home/jared/Documents/GS_Design/tia/schem/sf_half.sym
+* sch_path: /home/jared/Documents/GS_Design/tia/schem/sf_half.sch
 .subckt sf_half  VDD g_d Vout g_u GND
 *.iopin VDD
 *.iopin g_u
@@ -202,9 +208,9 @@ XM19 Vout g_d GND GND sky130_fd_pr__nfet_01v8 L=.45 W=650 nf=26 ad='int((nf+1)/2
 .ends
 
 
-* expanding   symbol:  tia-sscs-pico-2021/schem/cmfb_half.sym # of pins=7
-* sym_path: /home/jared/Documents/GS_Design/tia-sscs-pico-2021/schem/cmfb_half.sym
-* sch_path: /home/jared/Documents/GS_Design/tia-sscs-pico-2021/schem/cmfb_half.sch
+* expanding   symbol:  tia/schem/cmfb_half.sym # of pins=7
+* sym_path: /home/jared/Documents/GS_Design/tia/schem/cmfb_half.sym
+* sch_path: /home/jared/Documents/GS_Design/tia/schem/cmfb_half.sch
 .subckt cmfb_half  Vin res VDD GND Vb3 diode Vout
 *.iopin VDD
 *.iopin GND

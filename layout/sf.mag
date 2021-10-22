@@ -11,13 +11,13 @@ rect -1830 6170 -1030 6310
 rect -2735 3815 -2415 6130
 rect -5190 3630 -4390 3680
 rect -750 3630 50 3680
-use sf_half  sf_half_0
-timestamp 1634762988
-transform 1 0 -2500 0 1 6260
-box -70 -2630 2690 2390
 use sf_half  sf_half_1
 timestamp 1634762988
 transform -1 0 -2640 0 1 6260
+box -70 -2630 2690 2390
+use sf_half  sf_half_0
+timestamp 1634762988
+transform 1 0 -2500 0 1 6260
 box -70 -2630 2690 2390
 << labels >>
 rlabel metal1 -4785 3650 -4785 3650 1 GND

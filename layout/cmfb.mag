@@ -298,13 +298,13 @@ rect -329 630 125 650
 rect -500 45 -300 495
 rect -1535 -15 -1525 -5
 rect 705 -15 715 -5
-use cmfb_half  cmfb_half_0
-timestamp 1634684585
-transform 1 0 -35 0 1 1205
-box -310 -1220 1190 930
 use cmfb_half  cmfb_half_1
 timestamp 1634684585
 transform -1 0 -765 0 1 1205
+box -310 -1220 1190 930
+use cmfb_half  cmfb_half_0
+timestamp 1634684585
+transform 1 0 -35 0 1 1205
 box -310 -1220 1190 930
 << labels >>
 rlabel metal1 -405 275 -405 275 1 Vb3
