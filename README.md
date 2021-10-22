@@ -20,9 +20,9 @@ Quantum Random Number Generation (QRNG) uses the inherent randomness of quantum 
 | Open-loop Gain          | 44                  | dB                  |
 | Closed-loop Gain        | 93                  | dB                  |
 | Bandwidth               | 64                  | MHz                 |
-| Input-referred noise    | 24                  | Irms                |
+| Input-referred noise    | 24                  | nIrms               |
 | Output Swing            |                     | V                   |
-| Dynamic Range           |                     | dB                   |
+| Dynamic Range           |                     | dB                  |
 | Phase margin            |                     | °                   |
 | Gain margin             |                     | °                   |
 
