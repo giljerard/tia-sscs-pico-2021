@@ -319,11 +319,11 @@ set sqrnoise
 *noise v(Vout_n) IINN_source dec 10 1 10000T
 *noise v(Vout_n) IINN_source dec 50 1 100G
 noise v(Vout_p) IINN_source dec 10 20k 1g
-*setplot noise1
-*plot loglog onoise_spectrum
+setplot noise1
+plot loglog onoise_spectrum
 
-setplot noise2
-print onoise_total 
+*setplot noise2
+*print onoise_total 
 *exit
 .endc
 "}
