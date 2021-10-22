@@ -1,0 +1,59 @@
+Equate elements:  no current cell.
+Equate elements:  no current cell.
+
+Subcircuit summary:
+Circuit 1: core_half                       |Circuit 2: core_half                       
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8 (2)                |sky130_fd_pr__pfet_01v8 (2)                
+sky130_fd_pr__nfet_01v8 (1)                |sky130_fd_pr__nfet_01v8 (1)                
+Number of devices: 3                       |Number of devices: 3                       
+Number of nets: 7                          |Number of nets: 7                          
+---------------------------------------------------------------------------------------
+Resolving automorphisms by property value.
+Netlists match uniquely.
+Netlists match uniquely.
+Circuits match correctly.
+
+Subcircuit pins:
+Circuit 1: core_half                       |Circuit 2: core_half                       
+-------------------------------------------|-------------------------------------------
+Vout                                       |Vout                                       
+Vin                                        |Vin                                        
+s                                          |s                                          
+GND                                        |GND                                        
+Vcmfb                                      |Vcmfb                                      
+Vb2                                        |Vb2                                        
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes core_half and core_half are equivalent.
+
+Subcircuit summary:
+Circuit 1: core                            |Circuit 2: core                            
+-------------------------------------------|-------------------------------------------
+core_half (2)                              |core_half (2)                              
+sky130_fd_pr__nfet_01v8 (1)                |sky130_fd_pr__nfet_01v8 (1)                
+Number of devices: 3                       |Number of devices: 3                       
+Number of nets: 10                         |Number of nets: 10                         
+---------------------------------------------------------------------------------------
+Resolving automorphisms by property value.
+Resolving automorphisms by pin name.
+Netlists match uniquely.
+Circuits match correctly.
+
+Subcircuit pins:
+Circuit 1: core                            |Circuit 2: core                            
+-------------------------------------------|-------------------------------------------
+GND                                        |GND                                        
+Vb2                                        |Vb2                                        
+Vcmfb                                      |Vcmfb                                      
+VDD                                        |VDD                                        
+Vb1                                        |Vb1                                        
+Vin_n                                      |Vin_n                                      
+Vin_p                                      |Vin_p                                      
+Vout_p                                     |Vout_p                                     
+Vout_n                                     |Vout_n                                     
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes core and core are equivalent.
+Circuits match uniquely.

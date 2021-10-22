@@ -1,0 +1,52 @@
+Equate elements:  no current cell.
+Equate elements:  no current cell.
+
+Subcircuit summary:
+Circuit 1: sf_half                         |Circuit 2: sf_half                         
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8_lvt (1)            |sky130_fd_pr__nfet_01v8_lvt (1)            
+sky130_fd_pr__nfet_01v8 (1)                |sky130_fd_pr__nfet_01v8 (1)                
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 5                          |Number of nets: 5                          
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sf_half                         |Circuit 2: sf_half                         
+-------------------------------------------|-------------------------------------------
+GND                                        |GND                                        
+Vout                                       |Vout                                       
+VDD                                        |VDD                                        
+g_u                                        |g_u                                        
+g_d                                        |g_d                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sf_half and sf_half are equivalent.
+
+Subcircuit summary:
+Circuit 1: sf                              |Circuit 2: sf                              
+-------------------------------------------|-------------------------------------------
+sf_half (2)                                |sf_half (2)                                
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 7                          |Number of nets: 7                          
+---------------------------------------------------------------------------------------
+Resolving automorphisms by property value.
+Resolving automorphisms by pin name.
+Netlists match uniquely.
+Circuits match correctly.
+
+Subcircuit pins:
+Circuit 1: sf                              |Circuit 2: sf                              
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+Vb4                                        |Vb4                                        
+GND                                        |GND                                        
+Vout_n                                     |Vout_n                                     
+Vout_p                                     |Vout_p                                     
+Vin_n                                      |Vin_n                                      
+Vin_p                                      |Vin_p                                      
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sf and sf are equivalent.
+Circuits match uniquely.

@@ -1,0 +1,178 @@
+timestamp 1634758131
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+use core core_0 1 0 7010 0 1 2490
+port "GND" 8 12590 40 12590 40 m1
+port "Vb1" 9 14520 1360 14520 1360 m1
+port "Vop" 10 10260 2600 10260 2600 m1
+port "Vinn" 12 7400 2870 7400 2870 m1
+port "Vinp" 11 6870 2870 6870 2870 m1
+port "GND" 8 1500 10 1500 10 m1
+port "Vb2" 5 7090 4580 7090 4580 m1
+port "Von" 3 3740 2660 3740 2660 m1
+port "Vcmfb1" 6 7130 6060 7130 6060 m1
+port "VDD" 7 12360 6570 12360 6570 m1
+port "VDD" 7 1970 6530 1970 6530 m1
+node "GND" 1 672.555 12590 40 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 241192 2516 0 0 0 0 0 0 0 0 0 0
+node "Vb1" 0 698.476 14520 1360 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 321440 2388 0 0 0 0 0 0 0 0 0 0
+node "Vop" 2 7473.45 10260 2600 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5627676 18612 0 0 0 0 0 0 0 0 0 0
+node "Vinn" 0 623.361 7400 2870 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 266432 2196 0 0 0 0 0 0 0 0 0 0
+node "Vinp" 0 499.235 6870 2870 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 172608 1888 0 0 0 0 0 0 0 0 0 0
+node "GND" 1 593.057 1500 10 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 165564 2368 0 0 0 0 0 0 0 0 0 0
+node "Vb2" 0 812.954 7090 4580 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 360052 2824 0 0 0 0 0 0 0 0 0 0
+node "Von" 2 8474.36 3740 2660 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6715912 20044 0 0 0 0 0 0 0 0 0 0
+node "Vcmfb1" 0 445.254 7130 6060 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 167776 1640 0 0 0 0 0 0 0 0 0 0
+node "VDD" 0 726.27 12360 6570 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 292292 2616 0 0 0 0 0 0 0 0 0 0
+node "VDD" 0 726.27 1970 6530 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 292292 2616 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "Vinn" "Vinp" 121.395
+cap "Vop" "GND" 479.062
+cap "GND" "Von" 696.818
+cap "Von" "core_0/core_ndown_0/s#1" 16.6438
+cap "Von" "core_0/GND" 116.507
+cap "Von" "core_0/core_ndown_0/g" 82.45
+cap "core_0/core_ndown_0/s#1" "Von" 1260.37
+cap "Von" "core_0/core_ndown_0/d" 196.826
+cap "core_0/core_ndown_0/g" "Von" 82.45
+cap "Von" "core_0/core_ndown_0/g" 82.45
+cap "Von" "core_0/core_ndown_0/g" 82.45
+cap "Von" "core_0/core_ndown_0/d" 353.784
+cap "Von" "core_0/core_ndown_0/g" 82.45
+cap "core_0/core_ndown_0/d" "Von" 353.784
+cap "core_0/core_ndown_0/g" "Von" 23.765
+cap "core_0/core_ndown_0/s#1" "Von" -201.31
+cap "core_0/core_ndown_0/s#1" "Von" -530.68
+cap "core_0/core_ndown_0/s#1" "Von" -201.31
+cap "Von" "core_0/core_ndown_0/d" -201.31
+cap "core_0/core_ndown_0/g" "Von" 23.765
+cap "Von" "core_0/core_ndown_0/g" 23.765
+cap "Von" "core_0/core_ndown_0/g" 23.765
+cap "core_0/core_ndown_0/d" "Von" -201.31
+cap "Von" "core_0/core_ndown_0/g" 23.765
+cap "core_0/core_ndown_0/d" "Von" -171.965
+cap "core_0/core_ndown_0/g" "Vop" 38.645
+cap "core_0/core_ndown_0/g" "Vop" 38.645
+cap "core_0/core_ndown_0/s#1" "Vop" -209.665
+cap "core_0/core_ndown_0/s#1" "Vop" 18.006
+cap "core_0/core_ndown_0/d" "Vop" 129.608
+cap "Vop" "core_0/core_ndown_0/g" 38.645
+cap "core_0/core_ndown_0/g" "Vop" 38.645
+cap "core_0/core_ndown_0/s#1" "Vop" 18.006
+cap "core_0/core_ndown_0/g" "Vop" 38.645
+cap "core_0/core_ndown_0/g" "Vop" -25.96
+cap "core_0/core_ndown_0/g" "Vop" -25.96
+cap "core_0/core_ndown_0/d" "Vop" -462.532
+cap "Vop" "core_0/core_ndown_0/s#1" -1781.98
+cap "core_0/core_ndown_0/g" "Vop" -25.96
+cap "Vop" "core_0/core_ndown_0/g" -25.96
+cap "core_0/core_ndown_0/g" "Vop" -25.96
+cap "core_0/core_ndown_0/d" "Vop" -315.173
+cap "core_0/core_ndown_0/d" "Vop" -462.532
+cap "Vop" "core_0/GND#1" 109.038
+cap "core_0/core_ndown_0/s#1" "Vop" 24.8077
+cap "core_0/Vb1" "Vop" 40.3179
+subcap "Von" -8609.07
+cap "core_0/core_ndown_0/d" "core_0/core_half_0/Vout" 353.784
+cap "core_0/core_half_0/Vout" "core_0/core_ndown_0/s#1" 353.784
+cap "core_0/core_half_0/Vout" "core_0/core_ndown_0/s#1" 353.784
+cap "core_0/core_ndown_0/g" "core_0/core_half_0/Vout" 82.45
+cap "core_0/core_half_0/Vout" "core_0/core_ndown_0/s#1" 850.672
+cap "core_0/core_half_0/Vout" "core_0/core_ndown_0/g" 82.45
+cap "core_0/core_half_0/Vout" "core_0/core_ndown_0/g" 82.45
+cap "core_0/core_half_0/Vout" "core_0/core_ndown_0/d" 156.958
+cap "core_0/core_half_0/Vout" "core_0/core_ndown_0/d" 353.784
+cap "core_0/core_half_0/Vout" "core_0/core_ndown_0/g" 82.45
+cap "core_0/core_half_0/Vout" "core_0/core_half_0/s" 348.328
+cap "core_0/core_half_0/Vout" "core_0/core_ndown_0/g" 82.45
+subcap "Von" -4859.6
+cap "core_0/core_ndown_0/d" "core_0/core_half_0/Vout" -841.285
+cap "core_0/core_ndown_0/g" "core_0/core_half_0/Vout" 23.765
+cap "core_0/core_ndown_0/g" "core_0/core_half_0/Vout" 23.765
+cap "core_0/core_ndown_0/s#1" "core_0/core_half_0/Vout" -201.31
+cap "core_0/core_ndown_0/g" "core_0/core_half_0/Vout" 23.765
+cap "core_0/core_ndown_0/g" "core_0/core_half_0/Vout" 23.765
+cap "core_0/core_ndown_0/s#1" "core_0/core_half_0/Vout" -201.31
+cap "core_0/core_ndown_0/g" "core_0/core_half_0/Vout" 23.765
+cap "core_0/core_ndown_0/s#1" "core_0/core_half_0/Vout" -747.01
+cap "core_0/core_ndown_0/d" "core_0/core_half_0/Vin" 0.00723938
+subcap "Vinn" -2321.28
+subcap "Vinp" -2176.42
+cap "core_0/core_half_1/s" "core_0/Vin_n" 1.88665
+cap "core_0/Vin_p" "core_0/core_half_0/s" 0.0288462
+cap "core_0/Vin_p" "core_0/Vin_n" -1.61946
+cap "core_0/core_ndown_0/d#1" "core_0/core_half_1/Vin" 0.279316
+subcap "Vop" -3970.52
+cap "core_0/core_ndown_0/g" "core_0/core_half_1/Vout" 38.645
+cap "core_0/core_ndown_0/s#1" "core_0/core_half_1/Vout" 18.006
+cap "core_0/core_ndown_0/s#1" "core_0/core_half_1/Vout" -208.317
+cap "core_0/core_half_1/Vout" "core_0/core_ndown_0/g" 38.645
+cap "core_0/core_ndown_0/g" "core_0/core_half_1/Vout" 38.645
+cap "core_0/core_ndown_0/d" "core_0/core_half_1/Vout" 141.411
+cap "core_0/core_half_1/Vout" "core_0/core_ndown_0/s#1" 18.006
+cap "core_0/core_half_1/Vout" "core_0/core_ndown_0/g" 38.645
+cap "core_0/core_ndown_0/g" "core_0/core_half_1/Vout" 38.645
+subcap "Vop" -2939.39
+cap "core_0/core_ndown_0/s#1" "core_0/core_half_1/Vout" -1361.61
+cap "core_0/core_ndown_0/s#1" "core_0/core_half_1/Vout" -462.532
+cap "core_0/core_ndown_0/g" "core_0/core_half_1/Vout" -25.96
+cap "core_0/core_ndown_0/d" "core_0/core_half_1/Vout" -462.532
+cap "core_0/core_ndown_0/g" "core_0/core_half_1/Vout" -25.96
+cap "core_0/core_ndown_0/d" "core_0/core_half_1/Vout" -347.859
+cap "core_0/core_ndown_0/g" "core_0/core_half_1/Vout" -25.96
+cap "core_0/core_half_1/s" "core_0/core_half_1/Vout" -467.169
+cap "core_0/core_ndown_0/g" "core_0/core_half_1/Vout" -25.96
+cap "core_0/core_ndown_0/g" "core_0/core_half_1/Vout" -25.96
+cap "core_0/core_ndown_0/s#1" "core_0/core_half_1/Vout" -462.532
+cap "core_0/core_ndown_0/d" "core_0/core_half_1/Vout" -462.532
+subcap "Von" -9089.19
+cap "core_0/Vout_n" "core_0/core_half_0/Vin" 1.6875
+cap "core_0/core_half_0/VDD" "core_0/Vout_n" 80.3775
+cap "core_0/Vout_n" "core_0/core_half_0/Vin" 1.6875
+cap "core_0/core_half_0/s" "core_0/Vout_n" 29.55
+cap "core_0/Vout_n" "core_0/core_half_0/s" 29.225
+cap "core_0/Vout_n" "core_0/core_half_0/Vin" 24.735
+cap "core_0/core_ndown_0/s#1" "core_0/Vout_n" 28.9
+cap "core_0/core_half_0/Vb2" "core_0/Vout_n" 2.025
+cap "core_0/Vout_n" "core_0/core_half_0/Vb2" 2.025
+cap "core_0/core_half_0/Vin" "core_0/Vout_n" 1.6875
+cap "core_0/core_half_0/s" "core_0/Vout_n" 29.55
+cap "core_0/core_half_0/Vin" "core_0/Vout_n" 1.6875
+cap "core_0/core_half_0/Vin" "core_0/Vout_n" 1.6875
+subcap "Von" -3825.93
+cap "core_0/Vout_n" "core_0/core_half_0/Vin" -58.835
+cap "core_0/core_half_0/Vin" "core_0/core_ndown_0/d" 0.311293
+cap "core_0/Vin_n" "core_0/core_half_1/s" 21.2562
+cap "core_0/Vin_n" "core_0/Vin_p" -99.7093
+cap "core_0/Vin_p" "core_0/core_half_0/s" 1.40522
+cap "core_0/core_ndown_0/d#1" "core_0/core_half_1/Vin" 5.79116
+subcap "Vop" -7715.11
+cap "core_0/Vout_p" "core_0/core_half_1/s" 6.25
+cap "core_0/Vout_p" "core_0/core_half_1/Vin" -53.8775
+subcap "Vop" -1738.69
+cap "core_0/Vout_p" "core_0/core_half_1/Vin" -73.7525
+cap "core_0/core_half_0/VDD" "core_0/core_half_0/Vout" 52.0537
+cap "core_0/core_half_0/Vb2" "core_0/core_half_0/Vout" 12.875
+cap "core_0/core_half_0/Vout" "core_0/core_half_0/Vb2" 2.025
+cap "core_0/core_half_0/Vout" "core_0/core_half_0/Vb2" 2.025
+cap "core_0/core_half_0/Vb2" "core_0/core_half_0/Vout" 2.025
+merge "core_0/VSUBS" "VSUBS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "core_0/core_half_1/Vin" "core_0/Vin_n" -387.61 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -99800 -2084 0 0 0 0 0 0 0 0 0 0
+merge "core_0/Vin_n" "Vinn"
+merge "core_0/GND#1" "core_0/GND" -1027.95 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -129432 -4604 0 0 0 0 0 0 0 0 0 0
+merge "core_0/GND" "core_0/core_ndown_0/s#1"
+merge "core_0/core_ndown_0/s#1" "GND"
+merge "core_0/Vin_p" "core_0/core_half_0/Vin" -367.134 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 32016 -1884 0 0 0 0 0 0 0 0 0 0
+merge "core_0/core_half_0/Vin" "Vinp"
+merge "core_0/Vout_n" "core_0/core_half_0/Vout" -4296.02 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4032036 -9712 0 0 0 0 0 0 0 0 0 0
+merge "core_0/core_half_0/Vout" "Von"
+merge "core_0/VDD#1" "core_0/VDD" -1148.23 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -269808 -4616 0 0 0 0 0 0 0 0 0 0
+merge "core_0/VDD" "VDD"
+merge "core_0/Vcmfb" "Vcmfb1" -445.254 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -167776 -1640 0 0 0 0 0 0 0 0 0 0
+merge "core_0/Vout_p" "core_0/core_half_1/Vout" -2928.96 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2797032 -8128 0 0 0 0 0 0 0 0 0 0
+merge "core_0/core_half_1/Vout" "Vop"
+merge "core_0/Vb1" "Vb1" -696.961 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -399848 -2132 0 0 0 0 0 0 0 0 0 0
+merge "core_0/Vb2" "core_0/core_half_0/Vb2" -743.048 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -252504 -2824 0 0 0 0 0 0 0 0 0 0
+merge "core_0/core_half_0/Vb2" "Vb2"

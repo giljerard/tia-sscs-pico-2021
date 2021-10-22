@@ -1,0 +1,41 @@
+magic
+tech sky130A
+timestamp 1634767319
+<< metal1 >>
+rect -5190 8475 -4390 8650
+rect -750 8475 50 8650
+rect -2805 7395 -2640 7455
+rect -2500 7395 -2335 7455
+rect -4110 6170 -3310 6310
+rect -1830 6170 -1030 6310
+rect -2735 3815 -2415 6130
+rect -5190 3630 -4390 3680
+rect -750 3630 50 3680
+use sf_half  sf_half_0
+timestamp 1634762988
+transform 1 0 -2500 0 1 6260
+box -70 -2630 2690 2390
+use sf_half  sf_half_1
+timestamp 1634762988
+transform -1 0 -2640 0 1 6260
+box -70 -2630 2690 2390
+<< labels >>
+rlabel metal1 -4785 3650 -4785 3650 1 GND
+port 9 n
+rlabel metal1 -2655 7425 -2655 7425 1 Vin_n
+port 3 n
+rlabel metal1 -3725 6275 -3725 6275 1 Vout_n
+port 6 n
+rlabel metal1 -4790 8635 -4790 8635 1 VDD
+port 2 n
+rlabel metal1 -1425 6275 -1425 6275 1 Vout_p
+port 5 n
+rlabel metal1 -2485 7425 -2485 7425 1 Vin_p
+port 4 n
+rlabel metal1 -340 8635 -340 8635 1 VDD
+port 2 n
+rlabel metal1 -330 3645 -330 3645 1 GND
+port 9 n
+rlabel metal1 -2570 5020 -2570 5020 1 Vb4
+port 10 n
+<< end >>

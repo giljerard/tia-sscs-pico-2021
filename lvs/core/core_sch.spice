@@ -1,0 +1,42 @@
+.subckt core Vb2 Vcmfb VDD GND Vout_p Vin_p Vin_n Vout_n Vb1
+*.ipin Vb2
+*.ipin Vcmfb
+*.iopin VDD
+*.iopin GND
+*.opin Vout_p
+*.ipin Vin_p
+*.ipin Vin_n
+*.opin Vout_n
+*.ipin Vb1
+XM1 net1 Vb1 GND GND sky130_fd_pr__nfet_01v8 L=.5 W=710 nf=8 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+x1 Vin_p Vb2 Vcmfb VDD GND Vout_n net1 core_half
+x2 Vin_n Vb2 Vcmfb VDD GND Vout_p net1 core_half
+.ends
+
+* expanding   symbol:  tia/schem/core_half.sym # of pins=7
+* sym_path: /home/jaredgm2/Google-Skywater/design_libs/tia/schem/core_half.sym
+* sch_path: /home/jaredgm2/Google-Skywater/design_libs/tia/schem/core_half.sch
+.subckt core_half  Vin Vb2 Vcmfb VDD GND Vout s
+*.ipin Vb2
+*.ipin Vcmfb
+*.iopin VDD
+*.iopin GND
+*.opin Vout
+*.iopin s
+*.ipin Vin
+XM3 Vout Vin s GND sky130_fd_pr__nfet_01v8 L=0.15 W=150 nf=4 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM5 Vout Vcmfb VDD VDD sky130_fd_pr__pfet_01v8 L=0.18 W=112 nf=5 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM25 Vout Vb2 VDD VDD sky130_fd_pr__pfet_01v8 L=0.18 W=448 nf=15 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+.ends
+
+.GLOBAL GND
+** flattened .save nodes
+.end

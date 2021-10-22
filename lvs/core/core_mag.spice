@@ -1,0 +1,14 @@
+* NGSPICE file created from core.ext - technology: sky130A
+
+.subckt core_half Vout Vin s VDD Vcmfb Vb2 GND
+X0 VDD Vb2 Vout VDD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=2.8e+07u l=180000u M=16
+X1 Vout Vcmfb VDD VDD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=2.8e+07u l=180000u M=4
+X2 s Vin Vout GND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=2.5e+07u l=150000u M=6
+.ends
+
+.subckt core Vin_n Vout_p Vin_p Vout_n GND VDD Vb2 Vcmfb Vb1
+Xcore_half_0 Vout_n Vin_p core_half_1/s VDD Vcmfb Vb2 GND core_half
+Xcore_half_1 Vout_p Vin_n core_half_1/s VDD Vcmfb Vb2 GND core_half
+X0 GND Vb1 core_half_1/s GND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=7.1e+07u l=500000u M=10
+.ends
+
