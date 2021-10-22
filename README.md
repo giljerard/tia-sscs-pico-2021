@@ -2,10 +2,15 @@
 
 ## Contents
 Circuit Description/Design Goals
+
 Simulated Performance Summary
+
 Block Diagram
+
 Schematics
+
 Layout
+
 Simulations
 
 ### Circuit Description/Design Goals
