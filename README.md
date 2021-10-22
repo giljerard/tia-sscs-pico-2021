@@ -27,15 +27,14 @@ Quantum Random Number Generation (QRNG) uses the inherent randomness of quantum 
 |                         |                     |                     |
 | ----------------------- | ------------------- | ------------------- |
 | Vdd                     | 1.8                 | V                   |
-| Power Consumption       |                     | W                   |
+| Power Consumption       | 68.4                | mW                  |
 | Open-loop Gain          | 44                  | dB                  |
 | Closed-loop Gain        | 93                  | dB                  |
 | Bandwidth               | 64                  | MHz                 |
 | Input-referred noise    | 24                  | nIrms               |
-| Output Swing            |                     | V                   |
 | Dynamic Range           |                     | dB                  |
-| Phase margin            |                     | °                   |
-| Gain margin             |                     | °                   |
+| Phase margin            | 66                  | °                   |
+| Gain margin             | 32                  | °                   |
 
 ### Block Diagram
 ### Schematics
