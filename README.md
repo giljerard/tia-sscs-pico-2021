@@ -44,16 +44,16 @@ Quantum Random Number Generation (QRNG) uses the inherent randomness of quantum 
 ![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/schem/png/flattened.png)
 **Figure 1** – Top level schematic (flattened).
 
-<p align="center"><img src=".github/schem/png/core.png"/></p>
+![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/schem/png/core.png)
 **Figure 2** – Schematic of core amplifier (x2).
 
-<p align="center"><img src=".github/schem/png/cmfb.png"/></p>
+![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/schem/png/cmfb.png)
 **Figure 3** – Common-mode feedback amplifier schematic (x2).
 
-<p align="center"><img src=".github/schem/png/mirror_1.png"/></p>
+![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/schem/png/mirror_1.png)
 **Figure 4** – Schematic of current mirror (x3 with variations).
 
-<p align="center"><img src=".github/schem/png/sf.png"/></p>
+![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/schem/png/sf.png)
 **Figure 5** – Schematic of output buffer.
 
 
@@ -61,34 +61,34 @@ Quantum Random Number Generation (QRNG) uses the inherent randomness of quantum 
 
 ### Layout
 
-<p align="center"><img src=".github/layout/png/top.png"/></p>
+![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/layout/png/top.png)
 **Figure 6** – Top level layout.
 
-<p align="center"><img src=".github/layout/png/core.png"/></p>
+![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/layout/png/core.png)
 **Figure 7** – Layout of core amplifier (x2).
 
-<p align="center"><img src=".github/layout/png/cmfb.png"/></p>
+![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/layout/png/cmfb.png)
 **Figure 8** – Common-mode feedback amplifier layout (x2).
 
-<p align="center"><img src=".github/layout/png/mirror_1.png"/></p>
+![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/layout/png/mirror_1.png)
 **Figure 9** – Layout of current mirror (x3 with variations).
 
-<p align="center"><img src=".github/layout/png/sf.png"/></p>
+![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/layout/png/sf.png)
 **Figure 10** – Layout of output buffer.
 
-<p align="center"><img src=".github/layout/png/comp_cap.png"/></p>
+![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/layout/png/comp_cap.png)
 **Figure 11** – Layout of compensation capacitor.
 
 
 ### Simulations
 
-<p align="center"><img src=".github/sims/png/Gain-Bandwidth.png"/></p>
+![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/sims/png/Gain-Bandwidth.png)
 **Figure 12** – Plot of transimpedance gain.
 
-<p align="center"><img src=".github/sims/png/core_stability.png"/></p>
+![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/sims/png/core_stability.png)
 **Figure 13** – Gain and phase plot of core amplifier loop.
 
-<p align="center"><img src=".github/sims/png/cmfb_stability.png"/></p>
+![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/sims/png/core_stability.png)
 **Figure 14** – Gain and phase plot of cmfb amplifier loop (x2).
 
 
