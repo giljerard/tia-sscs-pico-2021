@@ -1,5 +1,9 @@
 # High-Gain TIA for Quantum-Photonics Interface
 
+DRC: Passing
+
+LVS: Passing
+
 ## Contents
 Circuit Description/Design Goals
 
