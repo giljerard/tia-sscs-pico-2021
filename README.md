@@ -103,7 +103,7 @@ Simulated performance is satisfactory for purposes as electronic amplifier for q
 ![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/sims/png/core_stability.png)
 **Figure 16** – Gain and phase plot of core amplifier loop.
 
-![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/sims/png/core_stability.png)
+![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/sims/png/cmfb_stability.png)
 **Figure 17** – Gain and phase plot of cmfb amplifier loop (x2).
 
 
