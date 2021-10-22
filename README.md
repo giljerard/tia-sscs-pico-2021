@@ -28,41 +28,45 @@ Our design is a novel high-gain, high-speed, low-noise transimpedance amplifier 
 
 Quantum Random Number Generation (QRNG) uses the inherent randomness of quantum mechanics to produce random numbers which are information-theoretically provable, truly random (as opposed to pseudorandom), and pass existing standard benchmarks. On-chip QRNG has been done before; however, what makes this project unique is that we use a 90° optical hybrid and have moved the detector circuit (TIA) from an external PCB to silicon, improving performance of the system. Both advances will allow for future research beyond QRNG into other useful quantum information such as quantum state tomography, quantum key distribution (QKD), and more.
 ### Simulated Performance Summary
-|                         |                     |                     |
-| ----------------------- | ------------------- | ------------------- |
-| Vdd                     | 1.8                 | V                   |
-| Power Consumption       | 68.4                | mW                  |
-| Open-loop Gain          | 44                  | dB                  |
-| Closed-loop Gain        | 93                  | dB                  |
-| Bandwidth               | 64                  | MHz                 |
-| Input-referred noise    | 24                  | nIrms               |
-| Dynamic Range           | 50                  | dB                  |
-| Phase margin            | 66                  | °                   |
-| Gain margin             | 32                  | °                   |
+| Parameter                       | Value               | Units               |
+| ------------------------------- | ------------------- | ------------------- |
+| Vdd                             | 1.8                 | V                   |
+| Power Consumption               | 68.4                | mW                  |
+| Open-loop Gain                  | 44                  | dB                  |
+| Closed-loop Gain                | 93                  | dB                  |
+| Bandwidth                       | 64                  | MHz                 |
+| Input-referred current noise    | 24                  | nIrms               |
+| Dynamic Range                   | 50                  | dB                  |
+| Phase margin                    | 66                  | °                   |
+| Gain margin                     | 32                  | °                   |
+
 **Table 1** – Simulated Performance Summary.
 
 Simulated performance is satisfactory for purposes as electronic amplifier for quantum information to be preserved.
 
 ### Block Diagram
 
+![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/block.png)
+**Figure 1** – Diagram of test setup.
+
 ### Schematics
 ![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/schem/png/Flattened-SSCS-1.png)
-**Figure 1** – Top level schematic.
+**Figure 2** – Top level schematic.
 
 ![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/schem/png/flattened.png)
-**Figure 1** – Top level schematic in Xschem (flattened) - click for detail.
+**Figure 3** – Top level schematic in Xschem (flattened) - click for detail.
 
 ![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/schem/png/core.png)
-**Figure 2** – Schematic of core amplifier (x2).
+**Figure 4** – Schematic of core amplifier (x2).
 
 ![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/schem/png/cmfb.png)
-**Figure 3** – Common-mode feedback amplifier schematic (x2).
+**Figure 5** – Common-mode feedback amplifier schematic (x2).
 
 ![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/schem/png/mirror_1.png)
-**Figure 4** – Schematic of current mirror (x3 with variations).
+**Figure 6** – Schematic of current mirror (x3 with variations).
 
 ![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/schem/png/sf.png)
-**Figure 5** – Schematic of output buffer.
+**Figure 7** – Schematic of output buffer.
 
 
 
@@ -70,34 +74,34 @@ Simulated performance is satisfactory for purposes as electronic amplifier for q
 ### Layout
 
 ![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/layout/png/top.png)
-**Figure 6** – Top level layout.
+**Figure 8** – Top level layout.
 
 ![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/layout/png/core.png)
-**Figure 7** – Layout of core amplifier (x2).
+**Figure 9** – Layout of core amplifier (x2).
 
 ![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/layout/png/cmfb.png)
-**Figure 8** – Common-mode feedback amplifier layout (x2).
+**Figure 10** – Common-mode feedback amplifier layout (x2).
 
 ![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/layout/png/mirror_1.png)
-**Figure 9** – Layout of current mirror (x3 with variations).
+**Figure 11** – Layout of current mirror (x3 with variations).
 
 ![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/layout/png/sf.png)
-**Figure 10** – Layout of output buffer.
+**Figure 12** – Layout of output buffer.
 
 ![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/layout/png/comp_cap.png)
-**Figure 11** – Layout of compensation capacitor.
+**Figure 13** – Layout of compensation capacitor.
 
 
 ### Simulations
 
 ![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/sims/png/Gain-Bandwidth.png)
-**Figure 12** – Plot of transimpedance gain.
+**Figure 14** – Plot of transimpedance gain.
 
 ![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/sims/png/core_stability.png)
-**Figure 13** – Gain and phase plot of core amplifier loop.
+**Figure 15** – Gain and phase plot of core amplifier loop.
 
 ![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/sims/png/core_stability.png)
-**Figure 14** – Gain and phase plot of cmfb amplifier loop (x2).
+**Figure 16** – Gain and phase plot of cmfb amplifier loop (x2).
 
 
 ### Final Steps
