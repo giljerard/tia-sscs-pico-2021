@@ -4,6 +4,8 @@ DRC: Passing
 
 LVS: Passing
 
+PEX Extraction: Done
+
 PEX Simulation: In progress
 
 ## Contents
@@ -35,10 +37,71 @@ Quantum Random Number Generation (QRNG) uses the inherent randomness of quantum 
 | Dynamic Range           |                     | dB                  |
 | Phase margin            | 66                  | °                   |
 | Gain margin             | 32                  | °                   |
+**Table 1** – Simulated Performance Summary.
 
 ### Block Diagram
 ### Schematics
+<p align="center"><img src=".github/schem/png/flattened.png"/></p>
+**Figure 1** – Top level schematic (flattened).
+
+<p align="center"><img src=".github/schem/png/core.png"/></p>
+**Figure 2** – Schematic of core amplifier (x2).
+
+<p align="center"><img src=".github/schem/png/cmfb.png"/></p>
+**Figure 3** – Common-mode feedback amplifier schematic (x2).
+
+<p align="center"><img src=".github/schem/png/mirror_1.png"/></p>
+**Figure 4** – Schematic of current mirror (x3 with variations).
+
+<p align="center"><img src=".github/schem/png/sf.png"/></p>
+**Figure 5** – Schematic of output buffer.
+
+
+
+
 ### Layout
+
+<p align="center"><img src=".github/layout/png/top.png"/></p>
+**Figure 6** – Top level layout.
+
+<p align="center"><img src=".github/layout/png/core.png"/></p>
+**Figure 7** – Layout of core amplifier (x2).
+
+<p align="center"><img src=".github/layout/png/cmfb.png"/></p>
+**Figure 8** – Common-mode feedback amplifier layout (x2).
+
+<p align="center"><img src=".github/layout/png/mirror_1.png"/></p>
+**Figure 9** – Layout of current mirror (x3 with variations).
+
+<p align="center"><img src=".github/layout/png/sf.png"/></p>
+**Figure 10** – Layout of output buffer.
+
+<p align="center"><img src=".github/layout/png/comp_cap.png"/></p>
+**Figure 11** – Layout of compensation capacitor.
+
+
 ### Simulations
 
-**Figure 1** – Top level schematic.
+<p align="center"><img src=".github/sims/png/Gain-Bandwidth.png"/></p>
+**Figure 12** – Plot of transimpedance gain.
+
+<p align="center"><img src=".github/sims/png/core_stability.png"/></p>
+**Figure 13** – Gain and phase plot of core amplifier loop.
+
+<p align="center"><img src=".github/sims/png/cmfb_stability.png"/></p>
+**Figure 14** – Gain and phase plot of cmfb amplifier loop (x2).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
