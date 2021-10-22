@@ -1,0 +1,96 @@
+timestamp 1634684585
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+use cmfb_half cmfb_half_1 -1 0 -1530 0 1 2410
+use cmfb_half cmfb_half_0 1 0 -70 0 1 2410
+parameters sky130_fd_pr__res_xhigh_po l=l w=w
+parameters sky130_fd_pr__res_xhigh_po_5p73 l=l
+parameters sky130_fd_pr__res_xhigh_po_2p85 l=l
+parameters sky130_fd_pr__res_xhigh_po_1p41 l=l
+parameters sky130_fd_pr__res_xhigh_po_0p69 l=l
+parameters sky130_fd_pr__res_xhigh_po_0p35 l=l
+port "GND#1" 16 1420 -20 1420 -20 m1
+port "GND" 17 -3060 -20 -3060 -20 m1
+port "Vb3" 13 -810 550 -810 550 m1
+port "Vcm" 15 2300 2250 2300 2250 m1
+port "Vref" 14 -3900 2240 -3900 2240 m1
+port "Vcmfb" 20 -2740 3430 -2740 3430 m1
+port "VDD" 18 410 4250 410 4250 m1
+port "VDD" 18 -2010 4250 -2010 4250 m1
+node "GND#1" 0 16.66 1420 -20 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 400 80 0 0 0 0 0 0 0 0 0 0
+node "GND" 0 16.66 -3060 -20 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 400 80 0 0 0 0 0 0 0 0 0 0
+node "Vb3" 0 767 -810 550 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 360000 2600 0 0 0 0 0 0 0 0 0 0
+node "Vcm" 0 16.66 2300 2250 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 400 80 0 0 0 0 0 0 0 0 0 0
+node "Vref" 0 16.66 -3900 2240 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 400 80 0 0 0 0 0 0 0 0 0 0
+node "Vcmfb" 0 16.66 -2740 3430 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 400 80 0 0 0 0 0 0 0 0 0 0
+node "VDD" 0 16.66 410 4250 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 400 80 0 0 0 0 0 0 0 0 0 0
+node "VDD" 0 16.66 -2010 4250 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 400 80 0 0 0 0 0 0 0 0 0 0
+node "a_n658_1260#" 79 1362.24 -658 1260 xpc 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 269592 3040 256056 2380 0 0 0 0 0 0 0 0 0 0
+node "a_n940_1260#" 2000 0 -940 1260 xres 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 79524 1128 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n1420_1260#" 79 1395.08 -1420 1260 xpc 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 270720 3048 270720 2484 0 0 0 0 0 0 0 0 0 0
+node "a_n1130_3590#" 2361 4773.97 -1130 3590 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 211200 5920 0 0 198400 5600 409300 5340 0 0 0 0 0 0 0 0 0 0
+node "w_n480_3590#" 81600 14.4 -480 3590 nw 0 0 0 0 4800 980 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_n1130_3590#" 15300 2.7 -1130 3590 nw 0 0 0 0 900 200 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_n1130_3720#" 13600 2.4 -1130 3720 nw 0 0 0 0 800 180 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_n1130_3860#" 13600 2.4 -1130 3860 nw 0 0 0 0 800 180 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_n1130_3980#" 15300 2.7 -1130 3980 nw 0 0 0 0 900 200 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "a_n1130_3590#" "w_n1130_3980#" 0.065
+cap "a_n658_1260#" "a_n1420_1260#" 78
+cap "Vb3" "a_n1420_1260#" 10
+cap "w_n480_3590#" "a_n1130_3590#" 1.04
+cap "w_n1130_3590#" "a_n1130_3590#" 0.065
+cap "a_n658_1260#" "Vb3" 9.66667
+device rsubckt sky130_fd_pr__res_xhigh_po -940 1260 -939 1261 l=282 w=282 "VSUBS" "a_n940_1260#" 0 0 "a_n1420_1260#" 282 0 "a_n658_1260#" 282 0
+cap "cmfb_half_1/GND" "cmfb_half_1/res" 52.8
+cap "cmfb_half_1/res" "cmfb_half_1/Vb3" 35.1111
+cap "cmfb_half_1/res" "cmfb_half_1/Vin" 13.05
+cap "cmfb_half_1/res" "cmfb_half_1/Vout" 217.119
+cap "cmfb_half_0/res" "cmfb_half_1/Vb3" 73.9778
+cap "cmfb_half_1/GND" "cmfb_half_0/res" 52.8
+cap "cmfb_half_0/res" "cmfb_half_0/Vin" 13.05
+cap "a_n1420_1260#" "cmfb_half_1/Vb3" 39.1111
+cap "cmfb_half_0/res" "cmfb_half_0/Vout" 217.119
+cap "cmfb_half_0/Vin" "cmfb_half_0/res" -82.485
+cap "cmfb_half_0/Vout" "cmfb_half_0/res" -376
+cap "cmfb_half_1/res" "cmfb_half_1/Vin" 13.05
+cap "cmfb_half_1/res" "cmfb_half_1/Vout" 218.536
+cap "cmfb_half_0/res" "cmfb_half_0/Vout" 218.536
+cap "cmfb_half_0/res" "cmfb_half_0/Vin" 13.05
+cap "cmfb_half_0/res" "cmfb_half_0/Vin" -82.485
+cap "cmfb_half_0/res" "cmfb_half_0/Vout" -376
+cap "cmfb_half_1/VDD" "cmfb_half_1/diode" 6.47
+cap "cmfb_half_1/diode" "cmfb_half_1/Vout" 19.8
+cap "cmfb_half_1/diode" "cmfb_half_0/Vout" 19.8
+cap "cmfb_half_1/diode" "cmfb_half_1/VDD" 6.6
+cap "cmfb_half_1/diode" "cmfb_half_1/Vout" 9.9
+cap "cmfb_half_0/VDD" "cmfb_half_1/diode" 212.88
+cap "cmfb_half_1/diode" "cmfb_half_1/Vout" 9.9
+cap "cmfb_half_1/diode" "cmfb_half_0/Vout" 19.8
+cap "cmfb_half_1/diode" "cmfb_half_0/res" 75
+cap "cmfb_half_0/res" "cmfb_half_0/Vout" 645
+cap "cmfb_half_0/Vout" "cmfb_half_0/VDD" 528.835
+merge "cmfb_half_0/GND" "GND#1" -29.94 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4400 -160 0 0 0 0 0 0 0 0 0 0
+merge "GND#1" "cmfb_half_1/GND"
+merge "cmfb_half_1/GND" "VSUBS"
+merge "VSUBS" "GND"
+merge "cmfb_half_0/VDD" "w_n480_3590#" 50.415 0 0 0 0 4200 -1740 0 0 80800 0 -2500 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 78800 0 -3500 -160 0 0 0 0 0 0 0 0 0 0
+merge "w_n480_3590#" "cmfb_half_1/VDD"
+merge "cmfb_half_1/VDD" "VDD"
+merge "VDD" "w_n1130_3590#"
+merge "w_n1130_3590#" "w_n1130_3720#"
+merge "w_n1130_3720#" "w_n1130_3860#"
+merge "w_n1130_3860#" "w_n1130_3980#"
+merge "cmfb_half_1/Vin" "Vref" -16.66 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -400 -80 0 0 0 0 0 0 0 0 0 0
+merge "cmfb_half_0/Vin" "Vcm" -16.66 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -400 -80 0 0 0 0 0 0 0 0 0 0
+merge "cmfb_half_0/Vout" "cmfb_half_0/diode" -739.645 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -61800 -1680 0 0 0 0 -1000 -140 0 0 0 0 0 0 0 0 0 0
+merge "cmfb_half_0/diode" "cmfb_half_1/diode"
+merge "cmfb_half_1/diode" "a_n1130_3590#"
+merge "cmfb_half_0/res" "a_n658_1260#" 790.681 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -139100 -584 0 0 0 0 0 0 0 0 0 0
+merge "cmfb_half_1/Vout" "Vcmfb" -13.8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4000 -80 0 0 0 0 0 0 0 0 0 0
+merge "cmfb_half_0/Vb3" "cmfb_half_1/Vb3" -892.66 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -124400 -3960 0 0 0 0 0 0 0 0 0 0
+merge "cmfb_half_1/Vb3" "Vb3"
+merge "cmfb_half_1/res" "a_n1420_1260#" -515.686 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -283080 -684 0 0 0 0 0 0 0 0 0 0

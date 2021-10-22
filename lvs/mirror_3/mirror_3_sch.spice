@@ -1,0 +1,24 @@
+.subckt mirror_3 GND Vb3_ Vb3
+*.iopin GND
+*.iopin Vb3_
+*.opin Vb3
+XM27 Vb3_ Vb3_ GND GND sky130_fd_pr__nfet_01v8 L=.5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=2 m=2 
+XR11 V10 Vb3 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XC1 Vb3 GND sky130_fd_pr__cap_mim_m3_1 W=15.8 L=15.8 MF=1 m=1
+XC2 GND Vb3 sky130_fd_pr__cap_mim_m3_2 W=15.8 L=15.8 MF=1 m=1
+XR1 Vb3_ V1 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR2 V10 V9 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR3 V2 V1 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR4 V8 V9 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR5 V2 V3 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR6 V8 V7 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR7 V4 V3 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR8 V6 V7 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR9 V4 V5 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR10 V6 V5 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+.ends
+.GLOBAL GND
+** flattened .save nodes
+.end

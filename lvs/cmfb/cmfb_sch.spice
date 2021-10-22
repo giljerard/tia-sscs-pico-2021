@@ -1,0 +1,37 @@
+.subckt cmfb VDD GND Vcmfb Vref Vb3 Vcm
+*.iopin VDD
+*.iopin GND
+*.opin Vcmfb
+*.ipin Vref
+*.iopin Vb3
+*.ipin Vcm
+x1 Vref net2 VDD GND Vb3 net3 Vcmfb cmfb_half
+x2 Vcm net1 VDD GND Vb3 net3 net3 cmfb_half
+XR20 net2 net1 GND sky130_fd_pr__res_xhigh_po W=1.41 L=1.41 mult=1 m=1
+.ends
+
+* expanding   symbol:  tia-sscs-pico-2021/schem/cmfb_half.sym # of pins=7
+* sym_path: /home/jared/Documents/GS_Design/tia-sscs-pico-2021/schem/cmfb_half.sym
+* sch_path: /home/jared/Documents/GS_Design/tia-sscs-pico-2021/schem/cmfb_half.sch
+.subckt cmfb_half  Vin res VDD GND Vb3 diode Vout
+*.iopin VDD
+*.iopin GND
+*.opin Vout
+*.ipin Vin
+*.iopin diode
+*.iopin Vb3
+*.iopin res
+XM11 Vout Vin res GND sky130_fd_pr__nfet_01v8 L=0.20 W=150 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM14 Vout diode VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM15 res Vb3 GND GND sky130_fd_pr__nfet_01v8 L=.5 W=65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+.ends
+
+.GLOBAL GND
+** flattened .save nodes
+.end

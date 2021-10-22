@@ -1,0 +1,22 @@
+----------Run LVS---
+netgen -batch lvs "sf_mag.spice sf" "sf_sch.spice sf" ~/open_pdks/sky130/sky130A/libs.tech/netgen/sky130A_setup.tcl
+netgen -batch lvs "core_mag.spice core" "core_sch.spice core" ~/open_pdks/sky130/sky130A/libs.tech/netgen/sky130A_setup.tcl
+netgen -batch lvs "cmfb_mag.spice cmfb" "cmfb_sch.spice cmfb" ~/open_pdks/sky130/sky130A/libs.tech/netgen/sky130A_setup.tcl
+netgen -batch lvs "mirror_1_mag.spice mirror_1" "mirror_1_sch.spice mirror_1" ~/open_pdks/sky130/sky130A/libs.tech/netgen/sky130A_setup.tcl 
+netgen -batch lvs "mirror_3_mag.spice mirror_3" "mirror_3_sch.spice mirror_3" ~/open_pdks/sky130/sky130A/libs.tech/netgen/sky130A_setup.tcl 
+netgen -batch lvs "mirror_4_mag.spice mirror_4" "mirror_4_sch.spice mirror_4" ~/open_pdks/sky130/sky130A/libs.tech/netgen/sky130A_setup.tcl 
+netgen -batch lvs "top_mag.spice top" "top_sch.spice top" ~/open_pdks/sky130/sky130A/libs.tech/netgen/sky130A_setup.tcl
+
+
+
+----------Magic Extraction
+extract all
+ext2spice lvs
+ext2spice merge conservative
+ext2spice -o ../lvs/top/top_mag.spice
+
+----------Xschem Extraction
+Simulation>"LVS netlist: top level is a .subckt"
+Netlist
+Simulation>Edit netlist
+>Save as: path/lvs/top_sch.spice

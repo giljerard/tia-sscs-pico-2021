@@ -1,0 +1,50 @@
+magic
+tech sky130A
+timestamp 1634785440
+<< metal1 >>
+rect 767 3192 1278 3335
+rect 5932 3206 6443 3349
+rect 3464 2935 3660 3149
+rect 1550 1831 2200 2205
+rect 3483 2008 3650 2547
+rect 1550 1650 2366 1831
+rect 1550 1483 2200 1650
+rect 499 -40 1010 41
+rect 1550 -73 2232 1483
+rect 3359 1273 3483 1621
+rect 3612 1263 3793 1631
+rect 4777 1626 5560 1807
+rect 4860 1497 5500 1626
+rect -288 -120 2232 -73
+rect 4829 -78 5511 1497
+rect 7154 494 7359 886
+rect 6066 -30 6577 88
+rect 4829 -120 7412 -78
+use core  core_0
+timestamp 1634785440
+transform 1 0 3505 0 1 1245
+box -3505 -1245 3790 2030
+<< labels >>
+rlabel metal1 3545 2290 3545 2290 1 Vb2
+port 5 n
+rlabel metal1 3565 3030 3565 3030 1 Vcmfb1
+port 6 n
+rlabel metal1 985 3265 985 3265 1 VDD
+port 7 n
+rlabel metal1 6180 3285 6180 3285 1 VDD
+port 7 n
+rlabel metal1 750 5 750 5 1 GND
+port 8 n
+rlabel metal1 6295 20 6295 20 1 GND
+port 8 n
+rlabel metal1 7260 680 7260 680 1 Vb1
+port 9 n
+rlabel metal1 1870 1330 1870 1330 1 Von
+port 3 n
+rlabel metal1 5130 1300 5130 1300 1 Vop
+port 10 n
+rlabel metal1 3435 1435 3435 1435 1 Vinp
+port 11 n
+rlabel metal1 3700 1435 3700 1435 1 Vinn
+port 12 n
+<< end >>

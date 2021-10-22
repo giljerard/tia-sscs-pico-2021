@@ -1,0 +1,20 @@
+* NGSPICE file created from mirror_1.ext - technology: sky130A
+
+.subckt mirror_1 Vb1 GND Vb1_
+X0 a_1900_980# a_5540_1300# GND sky130_fd_pr__res_xhigh_po w=350000u l=1.6e+07u
+X1 Vb1 GND sky130_fd_pr__cap_mim_m3_1 l=1.58e+07u w=1.58e+07u
+X2 Vb1_ Vb1_ GND GND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=3.6e+06u l=500000u
+**devattr d=D
+X3 a_1900_2900# a_5540_2580# GND sky130_fd_pr__res_xhigh_po w=350000u l=1.6e+07u
+X4 GND Vb1 sky130_fd_pr__cap_mim_m3_2 l=1.58e+07u w=1.58e+07u
+X5 a_1900_980# a_5540_660# GND sky130_fd_pr__res_xhigh_po w=350000u l=1.6e+07u
+X6 a_1900_2260# a_5540_1940# GND sky130_fd_pr__res_xhigh_po w=350000u l=1.6e+07u
+X7 a_1900_1620# a_5540_1300# GND sky130_fd_pr__res_xhigh_po w=350000u l=1.6e+07u
+X8 a_1900_340# a_5540_20# GND sky130_fd_pr__res_xhigh_po w=350000u l=1.6e+07u
+X9 a_1900_2900# Vb1 GND sky130_fd_pr__res_xhigh_po w=350000u l=1.6e+07u
+X10 Vb1_ a_5540_20# GND sky130_fd_pr__res_xhigh_po w=350000u l=1.6e+07u
+X11 a_1900_2260# a_5540_2580# GND sky130_fd_pr__res_xhigh_po w=350000u l=1.6e+07u
+X12 a_1900_1620# a_5540_1940# GND sky130_fd_pr__res_xhigh_po w=350000u l=1.6e+07u
+X13 a_1900_340# a_5540_660# GND sky130_fd_pr__res_xhigh_po w=350000u l=1.6e+07u
+.ends
+

@@ -1,0 +1,58 @@
+timestamp 1634785440
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+parameters sky130_fd_pr__nfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__pfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+port "Vin" 2 -7300 -620 -7300 -620 m1
+port "s" 3 -6000 -1300 -6000 -1300 m1
+port "Vb2" 8 -7310 1410 -7310 1410 m1
+port "Vout" 1 -4320 -130 -4320 -130 m1
+port "Vcmfb" 7 -7310 2500 -7310 2500 m1
+port "VDD" 5 -2330 2910 -2330 2910 m1
+port "GND" 11 -2440 -1300 -2440 -1300 m1
+node "Vin" 444 2168.14 -7300 -620 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1147600 62840 0 0 167400 4800 229400 2100 0 0 0 0 0 0 0 0 0 0
+node "s" 29116 11895 -6000 -1300 m1 0 0 0 0 0 0 0 0 1900000 40760 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1600000 40640 1648000 5260 0 0 0 0 0 0 0 0 0 0
+node "Vb2" 1222 9142.19 -7310 1410 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3675520 194240 0 0 396800 12480 657200 4860 0 0 0 0 0 0 0 0 0 0
+node "Vout" 18713 3809.19 -4320 -130 m1 0 0 0 0 0 0 0 0 1500000 30600 5600000 114000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5680000 144080 5894400 10568 0 0 0 0 0 0 0 0 0 0
+node "Vcmfb" 323 2360.37 -7310 2500 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 918880 48560 0 0 99200 3120 148800 1580 0 0 0 0 0 0 0 0 0 0
+node "VDD" 20607 61160.3 -2330 2910 m1 0 0 0 0 18361000 18140 0 0 896000 22720 6048000 125360 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5824000 125280 4784000 9180 0 0 0 0 0 0 0 0 0 0
+substrate "GND" 0 0 -2440 -1300 m1 0 0 0 0 0 0 0 0 0 0 800000 20320 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 800000 20320 280800 2820 0 0 0 0 0 0 0 0 0 0
+cap "s" "Vout" 28322.6
+cap "VDD" "Vout" 98160.5
+cap "VDD" "Vcmfb" 389.48
+cap "Vin" "Vout" 439.5
+cap "Vcmfb" "Vout" 278.16
+cap "VDD" "Vb2" 1598.22
+cap "Vb2" "Vout" 1439.52
+cap "Vb2" "Vcmfb" 910.498
+cap "VDD" "s" 785.714
+cap "s" "Vin" 666.171
+device msubckt sky130_fd_pr__nfet_01v8 -6970 -1050 -6969 -1049 l=30 w=5000 "GND" "Vin" 60 0 "s" 5000 0 "Vout" 5000 0
+device msubckt sky130_fd_pr__nfet_01v8 -6970 -920 -6969 -919 l=30 w=5000 "GND" "Vin" 60 0 "Vout" 5000 0 "s" 5000 0
+device msubckt sky130_fd_pr__nfet_01v8 -6970 -790 -6969 -789 l=30 w=5000 "GND" "Vin" 60 0 "s" 5000 0 "Vout" 5000 0
+device msubckt sky130_fd_pr__nfet_01v8 -6970 -660 -6969 -659 l=30 w=5000 "GND" "Vin" 60 0 "Vout" 5000 0 "s" 5000 0
+device msubckt sky130_fd_pr__nfet_01v8 -6970 -530 -6969 -529 l=30 w=5000 "GND" "Vin" 60 0 "s" 5000 0 "Vout" 5000 0
+device msubckt sky130_fd_pr__nfet_01v8 -6970 -400 -6969 -399 l=30 w=5000 "GND" "Vin" 60 0 "Vout" 5000 0 "s" 5000 0
+device msubckt sky130_fd_pr__pfet_01v8 -6970 100 -6969 101 l=36 w=5600 "VDD" "Vb2" 72 0 "VDD" 5600 0 "Vout" 5600 0
+device msubckt sky130_fd_pr__pfet_01v8 -6970 236 -6969 237 l=36 w=5600 "VDD" "Vb2" 72 0 "Vout" 5600 0 "VDD" 5600 0
+device msubckt sky130_fd_pr__pfet_01v8 -6970 372 -6969 373 l=36 w=5600 "VDD" "Vb2" 72 0 "VDD" 5600 0 "Vout" 5600 0
+device msubckt sky130_fd_pr__pfet_01v8 -6970 508 -6969 509 l=36 w=5600 "VDD" "Vb2" 72 0 "Vout" 5600 0 "VDD" 5600 0
+device msubckt sky130_fd_pr__pfet_01v8 -6970 644 -6969 645 l=36 w=5600 "VDD" "Vb2" 72 0 "VDD" 5600 0 "Vout" 5600 0
+device msubckt sky130_fd_pr__pfet_01v8 -6970 780 -6969 781 l=36 w=5600 "VDD" "Vb2" 72 0 "Vout" 5600 0 "VDD" 5600 0
+device msubckt sky130_fd_pr__pfet_01v8 -6970 916 -6969 917 l=36 w=5600 "VDD" "Vb2" 72 0 "VDD" 5600 0 "Vout" 5600 0
+device msubckt sky130_fd_pr__pfet_01v8 -6970 1052 -6969 1053 l=36 w=5600 "VDD" "Vb2" 72 0 "Vout" 5600 0 "VDD" 5600 0
+device msubckt sky130_fd_pr__pfet_01v8 -6970 1188 -6969 1189 l=36 w=5600 "VDD" "Vb2" 72 0 "VDD" 5600 0 "Vout" 5600 0
+device msubckt sky130_fd_pr__pfet_01v8 -6970 1324 -6969 1325 l=36 w=5600 "VDD" "Vb2" 72 0 "Vout" 5600 0 "VDD" 5600 0
+device msubckt sky130_fd_pr__pfet_01v8 -6970 1460 -6969 1461 l=36 w=5600 "VDD" "Vb2" 72 0 "VDD" 5600 0 "Vout" 5600 0
+device msubckt sky130_fd_pr__pfet_01v8 -6970 1596 -6969 1597 l=36 w=5600 "VDD" "Vb2" 72 0 "Vout" 5600 0 "VDD" 5600 0
+device msubckt sky130_fd_pr__pfet_01v8 -6970 1732 -6969 1733 l=36 w=5600 "VDD" "Vb2" 72 0 "VDD" 5600 0 "Vout" 5600 0
+device msubckt sky130_fd_pr__pfet_01v8 -6970 1868 -6969 1869 l=36 w=5600 "VDD" "Vb2" 72 0 "Vout" 5600 0 "VDD" 5600 0
+device msubckt sky130_fd_pr__pfet_01v8 -6970 2004 -6969 2005 l=36 w=5600 "VDD" "Vb2" 72 0 "VDD" 5600 0 "Vout" 5600 0
+device msubckt sky130_fd_pr__pfet_01v8 -6970 2140 -6969 2141 l=36 w=5600 "VDD" "Vb2" 72 0 "Vout" 5600 0 "VDD" 5600 0
+device msubckt sky130_fd_pr__pfet_01v8 -6970 2276 -6969 2277 l=36 w=5600 "VDD" "Vcmfb" 72 0 "VDD" 5600 0 "Vout" 5600 0
+device msubckt sky130_fd_pr__pfet_01v8 -6970 2412 -6969 2413 l=36 w=5600 "VDD" "Vcmfb" 72 0 "Vout" 5600 0 "VDD" 5600 0
+device msubckt sky130_fd_pr__pfet_01v8 -6970 2548 -6969 2549 l=36 w=5600 "VDD" "Vcmfb" 72 0 "VDD" 5600 0 "Vout" 5600 0
+device msubckt sky130_fd_pr__pfet_01v8 -6970 2684 -6969 2685 l=36 w=5600 "VDD" "Vcmfb" 72 0 "Vout" 5600 0 "VDD" 5600 0

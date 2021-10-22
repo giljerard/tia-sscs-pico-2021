@@ -1,0 +1,53 @@
+Equate elements:  no current cell.
+Equate elements:  no current cell.
+
+Subcircuit summary:
+Circuit 1: cmfb_half                       |Circuit 2: cmfb_half                       
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (2)                |sky130_fd_pr__nfet_01v8 (2)                
+sky130_fd_pr__pfet_01v8 (1)                |sky130_fd_pr__pfet_01v8 (1)                
+Number of devices: 3                       |Number of devices: 3                       
+Number of nets: 7                          |Number of nets: 7                          
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: cmfb_half                       |Circuit 2: cmfb_half                       
+-------------------------------------------|-------------------------------------------
+GND                                        |GND                                        
+Vin                                        |Vin                                        
+diode                                      |diode                                      
+Vb3                                        |Vb3                                        
+Vout                                       |Vout                                       
+res                                        |res                                        
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes cmfb_half and cmfb_half are equivalent.
+Equate elements:  no current cell.
+
+Subcircuit summary:
+Circuit 1: cmfb                            |Circuit 2: cmfb                            
+-------------------------------------------|-------------------------------------------
+cmfb_half (2)                              |cmfb_half (2)                              
+sky130_fd_pr__res_xhigh_po (1)             |sky130_fd_pr__res_xhigh_po (1)             
+Number of devices: 3                       |Number of devices: 3                       
+Number of nets: 9                          |Number of nets: 9                          
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: cmfb                            |Circuit 2: cmfb                            
+-------------------------------------------|-------------------------------------------
+Vref                                       |Vref                                       
+Vcmfb                                      |Vcmfb                                      
+Vcm                                        |Vcm                                        
+GND                                        |GND                                        
+VDD                                        |VDD                                        
+Vb3                                        |Vb3                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes cmfb and cmfb are equivalent.
+Circuits match uniquely.

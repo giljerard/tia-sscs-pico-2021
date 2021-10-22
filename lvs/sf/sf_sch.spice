@@ -1,0 +1,32 @@
+.subckt sf Vin_n VDD GND Vin_p Vout_n Vout_p Vb4
+*.ipin Vin_n
+*.iopin VDD
+*.iopin GND
+*.ipin Vin_p
+*.opin Vout_n
+*.opin Vout_p
+*.iopin Vb4
+X1 VDD Vb4 Vout_p Vin_p GND sf_half
+X2 VDD Vb4 Vout_n Vin_n GND sf_half
+.ends
+
+* expanding   symbol:  tia-sscs-pico-2021/schem/sf_half.sym # of pins=5
+* sym_path: /home/jared/Documents/GS_Design/tia-sscs-pico-2021/schem/sf_half.sym
+* sch_path: /home/jared/Documents/GS_Design/tia-sscs-pico-2021/schem/sf_half.sch
+.subckt sf_half  VDD g_d Vout g_u GND
+*.iopin VDD
+*.iopin g_u
+*.iopin GND
+*.iopin Vout
+*.iopin g_d
+XM17 VDD g_u Vout GND sky130_fd_pr__nfet_01v8_lvt L=0.32 W=650 nf=26 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1 
+XM19 Vout g_d GND GND sky130_fd_pr__nfet_01v8 L=.45 W=650 nf=26 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+.ends
+
+.GLOBAL GND
+** flattened .save nodes
+.end

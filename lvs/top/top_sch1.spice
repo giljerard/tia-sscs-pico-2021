@@ -1,0 +1,235 @@
+.subckt top VDD GND Vout_n Iin_n Iin_p Vb1_ Vout_p Vb2 Vb3_ Vb4_ Vb5
+*.iopin VDD
+*.iopin GND
+*.opin Vout_n
+*.ipin Iin_n
+*.ipin Iin_p
+*.ipin Vb1_
+*.opin Vout_p
+*.ipin Vb2
+*.ipin Vb3_
+*.ipin Vb4_
+*.ipin Vb5
+XR6 Vinn pre_Vout_p GND sky130_fd_pr__res_xhigh_po W=1.41 L=53 mult=1 m=1
+XR1 pre_Vout_n Vinp GND sky130_fd_pr__res_xhigh_po W=1.41 L=53 mult=1 m=1
+XR3 Vcm2 pre_Vout_p GND sky130_fd_pr__res_xhigh_po W=1.41 L=35 mult=1 m=1
+XR5 pre_Vout_n Vcm2 GND sky130_fd_pr__res_xhigh_po W=1.41 L=35 mult=1 m=1
+XR4 Vop net1 GND sky130_fd_pr__res_xhigh_po W=1.41 L=1.41 mult=1 m=1
+XR10 Von net2 GND sky130_fd_pr__res_xhigh_po W=1.41 L=1.41 mult=1 m=1
+XR17 Vcm1 Von GND sky130_fd_pr__res_xhigh_po W=1.41 L=35 mult=1 m=1
+XR18 Vop Vcm1 GND sky130_fd_pr__res_xhigh_po W=1.41 L=35 mult=1 m=1
+x1 Vinn Vinp Vb2 Vb1 Vcmfb1 VDD GND Vop Von core
+x2 Vop Von Vb2 Vb1 Vcmfb2 VDD GND pre_Vout_n pre_Vout_p core
+X1 VDD GND pre_Vout_n pre_Vout_p Vout_n Vout_p Vb4 sf
+x3 Vcm1 Vb5 Vb3 VDD GND Vcmfb1 cmfb
+x4 Vcm2 Vb5 Vb3 VDD GND Vcmfb2 cmfb
+x5 Vb1 Vb1_ GND mirror_1
+x6 Vb3 Vb3_ GND mirror_3
+x7 Vb4 Vb4_ GND mirror_4
+XC3 net1 pre_Vout_n sky130_fd_pr__cap_mim_m3_1 W=7.75 L=7.75 MF=1 m=1
+XC4 pre_Vout_n net1 sky130_fd_pr__cap_mim_m3_2 W=7.75 L=7.75 MF=1 m=1
+XC1 net2 pre_Vout_p sky130_fd_pr__cap_mim_m3_1 W=7.75 L=7.75 MF=1 m=1
+XC2 pre_Vout_p net2 sky130_fd_pr__cap_mim_m3_2 W=7.75 L=7.75 MF=1 m=1
+XC5 Iin_n Vinn sky130_fd_pr__cap_mim_m3_1 W=61.2 L=61.2 MF=1 m=1
+XC6 Vinn Iin_n sky130_fd_pr__cap_mim_m3_2 W=61.2 L=61.2 MF=1 m=1
+XC7 Iin_p Vinp sky130_fd_pr__cap_mim_m3_1 W=61.2 L=61.2 MF=1 m=1
+XC8 Vinp Iin_p sky130_fd_pr__cap_mim_m3_2 W=61.2 L=61.2 MF=1 m=1
+.ends
+
+* expanding   symbol:  tia/schem/core.sym # of pins=9
+* sym_path: /home/jared/Documents/GS_Design/tia/schem/core.sym
+* sch_path: /home/jared/Documents/GS_Design/tia/schem/core.sch
+.subckt core  Vin_n Vin_p Vb2 Vb1 Vcmfb VDD GND Vout_p Vout_n
+*.ipin Vb2
+*.ipin Vcmfb
+*.iopin VDD
+*.iopin GND
+*.opin Vout_p
+*.ipin Vin_p
+*.ipin Vin_n
+*.opin Vout_n
+*.ipin Vb1
+XM1 net1 Vb1 GND GND sky130_fd_pr__nfet_01v8 L=.5 W=710 nf=8 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+x1 Vin_p Vb2 Vcmfb VDD GND Vout_n net1 core_half
+x2 Vin_n Vb2 Vcmfb VDD GND Vout_p net1 core_half
+.ends
+
+
+* expanding   symbol:  tia/schem/sf.sym # of pins=7
+* sym_path: /home/jared/Documents/GS_Design/tia/schem/sf.sym
+* sch_path: /home/jared/Documents/GS_Design/tia/schem/sf.sch
+.subckt sf  VDD GND Vin_p Vin_n Vout_p Vout_n Vb4
+*.ipin Vin_n
+*.iopin VDD
+*.iopin GND
+*.ipin Vin_p
+*.opin Vout_n
+*.opin Vout_p
+*.iopin Vb4
+X1 VDD Vb4 Vout_p Vin_p GND sf_half
+X2 VDD Vb4 Vout_n Vin_n GND sf_half
+.ends
+
+
+* expanding   symbol:  tia/schem/cmfb.sym # of pins=6
+* sym_path: /home/jared/Documents/GS_Design/tia/schem/cmfb.sym
+* sch_path: /home/jared/Documents/GS_Design/tia/schem/cmfb.sch
+.subckt cmfb  Vcm Vref Vb3 VDD GND Vcmfb
+*.iopin VDD
+*.iopin GND
+*.opin Vcmfb
+*.ipin Vref
+*.iopin Vb3
+*.ipin Vcm
+x1 Vref net2 VDD GND Vb3 net3 Vcmfb cmfb_half
+x2 Vcm net1 VDD GND Vb3 net3 net3 cmfb_half
+XR20 net2 net1 GND sky130_fd_pr__res_xhigh_po W=1.41 L=1.41 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  tia/schem/mirror_1.sym # of pins=3
+* sym_path: /home/jared/Documents/GS_Design/tia/schem/mirror_1.sym
+* sch_path: /home/jared/Documents/GS_Design/tia/schem/mirror_1.sch
+.subckt mirror_1  Vb1 Vb1_ GND
+*.iopin GND
+*.iopin Vb1_
+*.opin Vb1
+XM27 Vb1_ Vb1_ GND GND sky130_fd_pr__nfet_01v8 L=.5 W=3.6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XC1 Vb1 GND sky130_fd_pr__cap_mim_m3_1 W=15.8 L=15.8 MF=1 m=1
+XC2 GND Vb1 sky130_fd_pr__cap_mim_m3_2 W=15.8 L=15.8 MF=1 m=1
+XR11 V10 Vb1 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR1 Vb1_ V1 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR2 V10 V9 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR3 V2 V1 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR4 V8 V9 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR5 V2 V3 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR6 V8 V7 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR7 V4 V3 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR8 V6 V7 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR9 V4 V5 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR10 V6 V5 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  tia/schem/mirror_3.sym # of pins=3
+* sym_path: /home/jared/Documents/GS_Design/tia/schem/mirror_3.sym
+* sch_path: /home/jared/Documents/GS_Design/tia/schem/mirror_3.sch
+.subckt mirror_3  Vb3 Vb3_ GND
+*.iopin GND
+*.iopin Vb3_
+*.opin Vb3
+XM27 Vb3_ Vb3_ GND GND sky130_fd_pr__nfet_01v8 L=.5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=2 m=2 
+XR11 V10 Vb3 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XC1 Vb3 GND sky130_fd_pr__cap_mim_m3_1 W=15.8 L=15.8 MF=1 m=1
+XC2 GND Vb3 sky130_fd_pr__cap_mim_m3_2 W=15.8 L=15.8 MF=1 m=1
+XR1 Vb3_ V1 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR2 V10 V9 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR3 V2 V1 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR4 V8 V9 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR5 V2 V3 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR6 V8 V7 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR7 V4 V3 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR8 V6 V7 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR9 V4 V5 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR10 V6 V5 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  tia/schem/mirror_4.sym # of pins=3
+* sym_path: /home/jared/Documents/GS_Design/tia/schem/mirror_4.sym
+* sch_path: /home/jared/Documents/GS_Design/tia/schem/mirror_4.sch
+.subckt mirror_4  Vb4 Vb4_ GND
+*.iopin GND
+*.iopin Vb4_
+*.opin Vb4
+XM27 Vb4_ Vb4_ GND GND sky130_fd_pr__nfet_01v8 L=.45 W=4 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XC1 Vb4 GND sky130_fd_pr__cap_mim_m3_1 W=15.8 L=15.8 MF=1 m=1
+XC2 GND Vb4 sky130_fd_pr__cap_mim_m3_2 W=15.8 L=15.8 MF=1 m=1
+XR11 V10 Vb4 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR1 Vb4_ V1 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR2 V10 V9 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR3 V2 V1 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR4 V8 V9 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR5 V2 V3 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR6 V8 V7 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR7 V4 V3 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR8 V6 V7 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR9 V4 V5 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+XR10 V6 V5 GND sky130_fd_pr__res_xhigh_po W=0.35 L=16 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  tia/schem/core_half.sym # of pins=7
+* sym_path: /home/jared/Documents/GS_Design/tia/schem/core_half.sym
+* sch_path: /home/jared/Documents/GS_Design/tia/schem/core_half.sch
+.subckt core_half  Vin Vb2 Vcmfb VDD GND Vout s
+*.ipin Vb2
+*.ipin Vcmfb
+*.iopin VDD
+*.iopin GND
+*.opin Vout
+*.iopin s
+*.ipin Vin
+XM3 Vout Vin s GND sky130_fd_pr__nfet_01v8 L=0.15 W=150 nf=4 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM5 Vout Vcmfb VDD VDD sky130_fd_pr__pfet_01v8 L=0.18 W=112 nf=5 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM25 Vout Vb2 VDD VDD sky130_fd_pr__pfet_01v8 L=0.18 W=448 nf=15 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+.ends
+
+
+* expanding   symbol:  tia/schem/sf_half.sym # of pins=5
+* sym_path: /home/jared/Documents/GS_Design/tia/schem/sf_half.sym
+* sch_path: /home/jared/Documents/GS_Design/tia/schem/sf_half.sch
+.subckt sf_half  VDD g_d Vout g_u GND
+*.iopin VDD
+*.iopin g_u
+*.iopin GND
+*.iopin Vout
+*.iopin g_d
+XM17 VDD g_u Vout GND sky130_fd_pr__nfet_01v8_lvt L=0.32 W=650 nf=26 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1 
+XM19 Vout g_d GND GND sky130_fd_pr__nfet_01v8 L=.45 W=650 nf=26 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+.ends
+
+
+* expanding   symbol:  tia/schem/cmfb_half.sym # of pins=7
+* sym_path: /home/jared/Documents/GS_Design/tia/schem/cmfb_half.sym
+* sch_path: /home/jared/Documents/GS_Design/tia/schem/cmfb_half.sch
+.subckt cmfb_half  Vin res VDD GND Vb3 diode Vout
+*.iopin VDD
+*.iopin GND
+*.opin Vout
+*.ipin Vin
+*.iopin diode
+*.iopin Vb3
+*.iopin res
+XM11 Vout Vin res GND sky130_fd_pr__nfet_01v8 L=0.20 W=150 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM14 Vout diode VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM15 res Vb3 GND GND sky130_fd_pr__nfet_01v8 L=.5 W=65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+.ends
+
+.GLOBAL GND
+** flattened .save nodes
+.end

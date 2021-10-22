@@ -1,0 +1,14 @@
+* NGSPICE file created from cmfb.ext - technology: sky130A
+
+.subckt cmfb_half VDD GND Vout res Vb3 Vin diode
+X0 Vout Vin res GND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+07u l=200000u M=15
+X1 GND Vb3 res GND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.3e+07u l=500000u M=5
+X2 Vout diode VDD VDD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.05e+07u l=200000u M=4
+.ends
+
+.subckt cmfb Vb3 Vref Vcm GND VDD Vcmfb
+Xcmfb_half_0 VDD GND cmfb_half_0/Vout cmfb_half_0/res Vb3 Vcm cmfb_half_0/Vout cmfb_half
+Xcmfb_half_1 VDD GND Vcmfb cmfb_half_1/res Vb3 Vref cmfb_half_0/Vout cmfb_half
+X0 cmfb_half_1/res cmfb_half_0/res GND sky130_fd_pr__res_xhigh_po w=1.41e+06u l=1.41e+06u
+.ends
+
