@@ -73,35 +73,38 @@ Simulated performance is satisfactory for purposes as electronic amplifier for q
 
 ### Layout
 
+![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/Floorplan.png)
+**Figure 8** – Basic floorplan.
+
 ![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/layout/png/top.png)
-**Figure 8** – Top level layout.
+**Figure 9** – Top level layout.
 
 ![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/layout/png/core.png)
-**Figure 9** – Layout of core amplifier (x2).
+**Figure 10** – Layout of core amplifier (x2).
 
 ![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/layout/png/cmfb.png)
-**Figure 10** – Common-mode feedback amplifier layout (x2).
+**Figure 11** – Common-mode feedback amplifier layout (x2).
 
 ![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/layout/png/mirror_1.png)
-**Figure 11** – Layout of current mirror (x3 with variations).
+**Figure 12** – Layout of current mirror (x3 with variations).
 
 ![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/layout/png/sf.png)
-**Figure 12** – Layout of output buffer.
+**Figure 13** – Layout of output buffer.
 
 ![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/layout/png/comp_cap.png)
-**Figure 13** – Layout of compensation capacitor.
+**Figure 14** – Layout of compensation capacitor.
 
 
 ### Simulations
 
 ![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/sims/png/Gain-Bandwidth.png)
-**Figure 14** – Plot of transimpedance gain.
+**Figure 15** – Plot of transimpedance gain.
 
 ![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/sims/png/core_stability.png)
-**Figure 15** – Gain and phase plot of core amplifier loop.
+**Figure 16** – Gain and phase plot of core amplifier loop.
 
 ![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/sims/png/core_stability.png)
-**Figure 16** – Gain and phase plot of cmfb amplifier loop (x2).
+**Figure 17** – Gain and phase plot of cmfb amplifier loop (x2).
 
 
 ### Final Steps
