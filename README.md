@@ -41,7 +41,7 @@ Quantum Random Number Generation (QRNG) uses the inherent randomness of quantum 
 
 ### Block Diagram
 ### Schematics
-<p align="center"><img src=".github/schem/png/flattened.png"/></p>
+![alt text](https://github.com/giljerard/tia-sscs-pico-2021/blob/oct22/schem/png/flattened.png)
 **Figure 1** – Top level schematic (flattened).
 
 <p align="center"><img src=".github/schem/png/core.png"/></p>
