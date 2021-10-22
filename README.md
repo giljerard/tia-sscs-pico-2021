@@ -4,6 +4,8 @@ DRC: Passing
 
 LVS: Passing
 
+PEX Simulation: In progress
+
 ## Contents
 Circuit Description/Design Goals
 
