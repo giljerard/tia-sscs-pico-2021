@@ -31,4 +31,4 @@ Quantum Random Number Generation (QRNG) uses the inherent randomness of quantum 
 ### Layout
 ### Simulations
 
-**Table 1** – DPGA expected performance.
+**Figure 1** – Top level schematic.
