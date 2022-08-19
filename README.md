@@ -38,7 +38,7 @@ Quantum Random Number Generation (QRNG) uses the inherent randomness of quantum 
 | Input-referred current noise    | 24                  | nIrms               |
 | Dynamic Range                   | 50                  | dB                  |
 | Phase margin                    | 66                  | °                   |
-| Gain margin                     | 32                  | °                   |
+| Gain margin                     | 32                  | dB                  |
 
 **Table 1** – Simulated Performance Summary.
 
