@@ -6,7 +6,7 @@ LVS: Passing
 
 Parasitic extraction: Done
 
-PEX Simulation: In progress
+PEX Simulation: Done
 
 ## Contents
 Circuit Description/Design Goals
